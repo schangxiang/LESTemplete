@@ -1,0 +1,58 @@
+2021-02-01 13:26:41,854| ERROR 
+Attempted to divide by zero.
+【自定义错误】：Attempted to divide by zero. 
+【异常类型】：DivideByZeroException 
+【异常信息】：Attempted to divide by zero. 
+【堆栈调用】：   at System.Decimal.DecCalc.VarDecDiv(DecCalc& d1, DecCalc& d2)
+   at System.Decimal.op_Division(Decimal d1, Decimal d2)
+   at LES.Core.Repository.Base.BaseRepository`1.QueryPage(Expression`1 whereExpression, Int32 intPageIndex, Int32 intPageSize, String strOrderByFileds) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Repository\BASE\BaseRepository.cs:line 459
+   at LES.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, Int32 intPageIndex, Int32 intPageSize, String strOrderByFileds) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Services\BASE\BaseServices.cs:line 314
+   at LES.Core.Controllers.ModuleController.Get(ModulesParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\ModuleController.cs:line 54
+   at lambda_method545(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------
+2021-02-01 13:32:52,400| ERROR 
+An unhandled exception has occurred while executing the request.
+--------------------------------
+Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end of request content.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelBadHttpRequestException.Throw(RequestRejectionReason reason)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.Http1ContentLengthMessageBody.ReadAsyncInternal(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream.ReadAsyncInternal(Memory`1 destination, CancellationToken cancellationToken)
+   at System.Text.Json.JsonSerializer.ReadAsync[TValue](Stream utf8Json, Type returnType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at StackExchange.Profiling.MiniProfilerMiddleware.GetSingleProfilerResultAsync(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 338
+   at StackExchange.Profiling.MiniProfilerMiddleware.HandleRequest(HttpContext context, PathString subPath) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 228
+   at StackExchange.Profiling.MiniProfilerMiddleware.Invoke(HttpContext context) in C:\projects\dotnet\src\MiniProfiler.AspNetCore\MiniProfilerMiddleware.cs:line 74
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.StatusCodePagesMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-02-01 16:44:09,056| ERROR 
+Method 'Boolean Contains(System.String)' declared on type 'System.String' cannot be called with instance of type 'System.Int32'
+【自定义错误】：Method 'Boolean Contains(System.String)' declared on type 'System.String' cannot be called with instance of type 'System.Int32' 
+【异常类型】：ArgumentException 
+【异常信息】：Method 'Boolean Contains(System.String)' declared on type 'System.String' cannot be called with instance of type 'System.Int32' 
+【堆栈调用】：   at System.Linq.Expressions.Expression.ValidateCallInstanceType(Type instanceType, MethodInfo method)
+   at System.Linq.Expressions.Expression.ValidateMethodAndGetParameters(Expression instance, MethodInfo method)
+   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, Expression arg0)
+   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, IEnumerable`1 arguments)
+   at LES.Core.Extensions.Others.PredicateExtensions.GetConditionExpressionForMoreField[T](String[] fieldNames, String fieldValue) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\PredicateExtensions.cs:line 99
+   at LES.Core.Extensions.Others.WhereConditionsExtensions.GetWhereConditions[T,TParam](TParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\WhereConditionsExtensions.cs:line 57
+   at LES.Core.Api.Controllers.Wip_StockInfoController.Get(Wip_StockInfoParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\WIP\Wip_StockInfoController.cs:line 45
+   at lambda_method983(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------

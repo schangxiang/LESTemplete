@@ -1,0 +1,81 @@
+2021-01-30 12:42:53,208| ERROR 
+Value cannot be null. (Parameter 'method')
+【自定义错误】：Value cannot be null. (Parameter 'method') 
+【异常类型】：ArgumentNullException 
+【异常信息】：Value cannot be null. (Parameter 'method') 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, Expression arg0)
+   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, IEnumerable`1 arguments)
+   at LES.Core.Extensions.Others.PredicateExtensions.GetConditionExpressionForHighFieldByAnd[T](List`1 hsmList) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\PredicateExtensions.cs:line 170
+   at LES.Core.Extensions.Others.WhereConditionsExtensions.GetWhereConditions[T,TParam](TParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\WhereConditionsExtensions.cs:line 102
+   at LES.Core.Controllers.RoleController.Get(RoleParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\RoleController.cs:line 72
+   at lambda_method545(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------
+2021-01-30 12:44:59,009| ERROR 
+Value cannot be null. (Parameter 'method')
+【自定义错误】：Value cannot be null. (Parameter 'method') 
+【异常类型】：ArgumentNullException 
+【异常信息】：Value cannot be null. (Parameter 'method') 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, Expression arg0)
+   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, IEnumerable`1 arguments)
+   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, Expression[] arguments)
+   at LES.Core.Extensions.Others.PredicateExtensions.GetConditionExpressionForHighFieldByAnd[T](List`1 hsmList) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\PredicateExtensions.cs:line 170
+   at LES.Core.Extensions.Others.WhereConditionsExtensions.GetWhereConditions[T,TParam](TParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\WhereConditionsExtensions.cs:line 102
+   at LES.Core.Controllers.RoleController.Get(RoleParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\RoleController.cs:line 72
+   at lambda_method546(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------
+2021-01-30 12:56:15,480| ERROR 
+Value cannot be null. (Parameter 'method')
+【自定义错误】：Value cannot be null. (Parameter 'method') 
+【异常类型】：ArgumentNullException 
+【异常信息】：Value cannot be null. (Parameter 'method') 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, Expression arg0)
+   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, IEnumerable`1 arguments)
+   at LES.Core.Extensions.Others.PredicateExtensions.GetConditionExpressionForHighFieldByAnd[T](List`1 hsmList) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\PredicateExtensions.cs:line 170
+   at LES.Core.Extensions.Others.WhereConditionsExtensions.GetWhereConditions[T,TParam](TParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\WhereConditionsExtensions.cs:line 102
+   at LES.Core.Controllers.RoleController.Get(RoleParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\RoleController.cs:line 72
+   at lambda_method546(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------
+2021-01-30 12:57:48,009| ERROR 
+Value cannot be null. (Parameter 'method')
+【自定义错误】：Value cannot be null. (Parameter 'method') 
+【异常类型】：ArgumentNullException 
+【异常信息】：Value cannot be null. (Parameter 'method') 
+【堆栈调用】：   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, Expression arg0)
+   at System.Linq.Expressions.Expression.Call(Expression instance, MethodInfo method, IEnumerable`1 arguments)
+   at LES.Core.Extensions.Others.PredicateExtensions.GetConditionExpressionForHighFieldByAnd[T](List`1 hsmList) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\PredicateExtensions.cs:line 171
+   at LES.Core.Extensions.Others.WhereConditionsExtensions.GetWhereConditions[T,TParam](TParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Extensions\Others\WhereConditionsExtensions.cs:line 102
+   at LES.Core.Controllers.RoleController.Get(RoleParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\RoleController.cs:line 72
+   at lambda_method546(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------

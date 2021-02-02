@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="LES.Core.FrameWork.Entity\LES.Core.FrameWork.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LES.Core.FrameWork.cs</LastGenOutput>
+    </None>
+    <None Update="LES.Core.FrameWork.IRepository\LES.Core.FrameWork.IRepository.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LES.Core.FrameWork.IRepository.cs</LastGenOutput>
+    </None>
+    <None Update="LES.Core.FrameWork.IServices\LES.Core.FrameWork.IServices.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LES.Core.FrameWork.IServices.cs</LastGenOutput>
+    </None>
+    <None Update="LES.Core.FrameWork.Repository\LES.Core.FrameWork.Repository.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LES.Core.FrameWork.Repository.cs</LastGenOutput>
+    </None>
+    <None Update="LES.Core.FrameWork.Services\LES.Core.FrameWork.Services.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LES.Core.FrameWork.Services.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LES.Core.FrameWork.IRepository\LES.Core.FrameWork.IRepository.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LES.Core.FrameWork.IRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Update="LES.Core.FrameWork.IServices\LES.Core.FrameWork.IServices.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LES.Core.FrameWork.IServices.tt</DependentUpon>
+    </Compile>
+    <Compile Update="LES.Core.FrameWork.Repository\LES.Core.FrameWork.Repository.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LES.Core.FrameWork.Repository.tt</DependentUpon>
+    </Compile>
+    <Compile Update="LES.Core.FrameWork.Services\LES.Core.FrameWork.Services.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LES.Core.FrameWork.Services.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

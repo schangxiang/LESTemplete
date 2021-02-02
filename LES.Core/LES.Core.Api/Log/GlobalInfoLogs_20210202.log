@@ -1,0 +1,6 @@
+2021-02-02 10:49:16,080| INFO AspNetCoreRateLimit.IpRateLimitMiddleware 
+Request post:/api/role/get from IP ::ffff:127.0.0.1 has been blocked, quota 3/1s exceeded by 4. Blocked by rule */api/*, TraceIdentifier 0HM673JGO74RJ:00000002.
+--------------------------------
+2021-02-02 15:17:18,076| INFO AspNetCoreRateLimit.IpRateLimitMiddleware 
+Request post:/api/user/get from IP ::ffff:127.0.0.1 has been blocked, quota 3/1s exceeded by 4. Blocked by rule */api/*, TraceIdentifier 0HM676RP2T4Q9:00000002.
+--------------------------------

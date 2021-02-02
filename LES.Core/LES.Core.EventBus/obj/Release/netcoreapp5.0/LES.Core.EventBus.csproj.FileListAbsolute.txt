@@ -1,0 +1,15 @@
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\bin\Release\netcoreapp5.0\LES.Core.EventBus.deps.json
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\bin\Release\netcoreapp5.0\LES.Core.EventBus.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\bin\Release\netcoreapp5.0\ref\LES.Core.EventBus.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\bin\Release\netcoreapp5.0\LES.Core.EventBus.pdb
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\bin\Release\netcoreapp5.0\LES.Core.Common.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\bin\Release\netcoreapp5.0\LES.Core.Common.pdb
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.csprojAssemblyReference.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.GeneratedMSBuildEditorConfig.editorconfig
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.AssemblyInfoInputs.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.AssemblyInfo.cs
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.csproj.CoreCompileInputs.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.csproj.CopyComplete
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\ref\LES.Core.EventBus.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.EventBus\obj\Release\netcoreapp5.0\LES.Core.EventBus.pdb

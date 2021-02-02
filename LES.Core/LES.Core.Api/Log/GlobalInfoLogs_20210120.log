@@ -1,0 +1,12 @@
+2021-01-20 09:59:13,325| INFO AspNetCoreRateLimit.IpRateLimitMiddleware 
+Request get:/api/permission/gettreetable from IP ::ffff:127.0.0.1 has been blocked, quota 3/1s exceeded by 4. Blocked by rule */api/*, TraceIdentifier 0HM5SRUUH6IO3:00000002.
+--------------------------------
+2021-01-20 09:59:13,482| INFO AspNetCoreRateLimit.IpRateLimitMiddleware 
+Request get:/api/permission/gettreetable from IP ::ffff:127.0.0.1 has been blocked, quota 3/1s exceeded by 5. Blocked by rule */api/*, TraceIdentifier 0HM5SRUUH6IO4:00000002.
+--------------------------------
+2021-01-20 09:59:13,673| INFO AspNetCoreRateLimit.IpRateLimitMiddleware 
+Request get:/api/permission/gettreetable from IP ::ffff:127.0.0.1 has been blocked, quota 3/1s exceeded by 6. Blocked by rule */api/*, TraceIdentifier 0HM5SRUUH6IO5:00000002.
+--------------------------------
+2021-01-20 10:03:10,385| INFO AspNetCoreRateLimit.IpRateLimitMiddleware 
+Request get:/api/permission/gettreetable from IP ::ffff:127.0.0.1 has been blocked, quota 3/1s exceeded by 4. Blocked by rule */api/*, TraceIdentifier 0HM5SRUUH6IPD:00000002.
+--------------------------------

@@ -1,0 +1,96 @@
+2021-01-25 13:25:59,129| ERROR 
+资源池 'internal' 没有足够的系统内存来运行此查询。
+错误: 596，严重性: 21，状态: 1。(参数:)。所显示的错误消息非常简洁，因为在格式设置期间有错误。跟踪、ETW 和通知等均被跳过。
+
+A severe error occurred on the current command.  The results, if any, should be discarded.
+【自定义错误】：资源池 'internal' 没有足够的系统内存来运行此查询。
+错误: 596，严重性: 21，状态: 1。(参数:)。所显示的错误消息非常简洁，因为在格式设置期间有错误。跟踪、ETW 和通知等均被跳过。
+
+A severe error occurred on the current command.  The results, if any, should be discarded. 
+【异常类型】：SqlException 
+【异常信息】：资源池 'internal' 没有足够的系统内存来运行此查询。
+错误: 596，严重性: 21，状态: 1。(参数:)。所显示的错误消息非常简洁，因为在格式设置期间有错误。跟踪、ETW 和通知等均被跳过。
+
+A severe error occurred on the current command.  The results, if any, should be discarded. 
+【堆栈调用】：   at SqlSugar.AdoProvider.GetDataReaderAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetDataAsync[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToListAsync[TResult]()
+   at LES.Core.Repository.Base.BaseRepository`1.Query(Expression`1 whereExpression) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Repository\BASE\BaseRepository.cs:line 275
+   at LES.Core.Services.BASE.BaseServices`1.Query(Expression`1 whereExpression) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Services\BASE\BaseServices.cs:line 155
+   at LES.Core.Controllers.UserController.Get(UserInfoParam param) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\UserController.cs:line 75
+   at lambda_method680(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------
+2021-01-25 13:25:59,129| ERROR 
+A severe error occurred on the current command.  The results, if any, should be discarded.
+【自定义错误】：A severe error occurred on the current command.  The results, if any, should be discarded. 
+【异常类型】：SqlException 
+【异常信息】：A severe error occurred on the current command.  The results, if any, should be discarded. 
+【堆栈调用】：   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at LES.Core.Repository.Base.BaseRepository`1.QueryPage(Expression`1 whereExpression, Int32 intPageIndex, Int32 intPageSize, String strOrderByFileds) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Repository\BASE\BaseRepository.cs:line 454
+   at LES.Core.Services.BASE.BaseServices`1.QueryPage(Expression`1 whereExpression, Int32 intPageIndex, Int32 intPageSize, String strOrderByFileds) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Services\BASE\BaseServices.cs:line 314
+   at LES.Core.Controllers.RoleController.Get(Int32 page, String key) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\RoleController.cs:line 46
+   at lambda_method643(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------
+2021-01-25 13:46:35,010| ERROR 
+不能将值 NULL 插入列 'setCodeName'，表 'GSiemens_LES.dbo.Base_CodeItems'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+【自定义错误】：不能将值 NULL 插入列 'setCodeName'，表 'GSiemens_LES.dbo.Base_CodeItems'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 
+【异常类型】：SqlException 
+【异常信息】：不能将值 NULL 插入列 'setCodeName'，表 'GSiemens_LES.dbo.Base_CodeItems'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 
+【堆栈调用】：   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetIntAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteReturnIdentityAsync()
+   at LES.Core.Repository.Base.BaseRepository`1.Add(TEntity entity) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Repository\BASE\BaseRepository.cs:line 105
+   at LES.Core.Services.BASE.BaseServices`1.Add(TEntity entity) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Services\BASE\BaseServices.cs:line 52
+   at LES.Core.Api.Controllers.Base_CodeItemsController.Post(Base_CodeItems request) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\BaseData\Base_CodeItemsController.cs:line 63
+   at lambda_method990(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------
+2021-01-25 13:46:42,874| ERROR 
+不能将值 NULL 插入列 'setCodeName'，表 'GSiemens_LES.dbo.Base_CodeItems'；列不允许有 Null 值。INSERT 失败。
+语句已终止。
+【自定义错误】：不能将值 NULL 插入列 'setCodeName'，表 'GSiemens_LES.dbo.Base_CodeItems'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 
+【异常类型】：SqlException 
+【异常信息】：不能将值 NULL 插入列 'setCodeName'，表 'GSiemens_LES.dbo.Base_CodeItems'；列不允许有 Null 值。INSERT 失败。
+语句已终止。 
+【堆栈调用】：   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetIntAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteReturnIdentityAsync()
+   at LES.Core.Repository.Base.BaseRepository`1.Add(TEntity entity) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Repository\BASE\BaseRepository.cs:line 105
+   at LES.Core.Services.BASE.BaseServices`1.Add(TEntity entity) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Services\BASE\BaseServices.cs:line 52
+   at LES.Core.Api.Controllers.Base_CodeItemsController.Post(Base_CodeItems request) in D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Api\Controllers\BaseData\Base_CodeItemsController.cs:line 63
+   at lambda_method990(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+--------------------------------

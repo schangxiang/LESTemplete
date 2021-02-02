@@ -1,0 +1,12 @@
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\bin\Release\net5.0\LES.Core.Common.deps.json
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\bin\Release\net5.0\LES.Core.Common.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\bin\Release\net5.0\ref\LES.Core.Common.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\bin\Release\net5.0\LES.Core.Common.pdb
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\LES.Core.Common.csprojAssemblyReference.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\LES.Core.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\LES.Core.Common.AssemblyInfoInputs.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\LES.Core.Common.AssemblyInfo.cs
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\LES.Core.Common.csproj.CoreCompileInputs.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\LES.Core.Common.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\ref\LES.Core.Common.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.Common\obj\Release\net5.0\LES.Core.Common.pdb
