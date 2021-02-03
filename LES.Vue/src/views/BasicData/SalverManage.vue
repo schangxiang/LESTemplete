@@ -15,6 +15,7 @@
                     :drawerSize="drawerSize"
                     :labelWidth="labelWidth"
                     :controlStyle="controlStyle"
+                    :searchValControlStyle="searchValControlStyle"
                     :searchFormInputPlaceholder="searchFormInputPlaceholder"
                     :searchFormInputAttrs="searchFormInputAttrs"
                     ref="ChildSearchForm"
@@ -182,6 +183,9 @@ export default {
 
       //搜索框相关 
       commonSearchOptionSet: "精准",//通用查询的默认配置,"模糊"或"精准"
+      searchValControlStyle: {//设置通用搜索框的长度等样式 
+        width: '300px',
+      },
       controlStyle: {//设置搜索控件的长度等样式
         width: '300px',
       },

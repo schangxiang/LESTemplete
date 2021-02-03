@@ -15,6 +15,7 @@
                     :drawerSize="drawerSize"
                     :labelWidth="labelWidth"
                     :controlStyle="controlStyle"
+                    :searchValControlStyle="searchValControlStyle"
                     :searchFormInputPlaceholder="searchFormInputPlaceholder"
                     :searchFormInputAttrs="searchFormInputAttrs"
                     ref="ChildSearchForm"
@@ -113,6 +114,7 @@
                v-model="editFormVisible"
                :close-on-click-modal="false">
       <el-form :model="editForm"
+               size="small"
                label-width="80px"
                :rules="editFormRules"
                ref="editForm">
@@ -152,6 +154,7 @@
                v-model="addFormVisible"
                :close-on-click-modal="false">
       <el-form :model="addForm"
+               size="small"
                label-width="80px"
                :rules="addFormRules"
                ref="addForm">
@@ -217,6 +220,9 @@ export default {
       //搜索框相关 
       ChildSearchForm: {},
       commonSearchOptionSet: "精准",//通用查询的默认配置,"模糊"或"精准"
+      searchValControlStyle: {//设置通用搜索框的长度等样式 
+        width: '300px',
+      },
       controlStyle: {//设置搜索控件的长度等样式 
         width: '200px',
       },

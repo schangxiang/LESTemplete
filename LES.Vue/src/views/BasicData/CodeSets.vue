@@ -14,6 +14,7 @@
                     :drawerSize="drawerSize"
                     :labelWidth="labelWidth"
                     :controlStyle="controlStyle"
+                    :searchValControlStyle="searchValControlStyle"
                     :searchFormInputPlaceholder="searchFormInputPlaceholder"
                     :searchFormInputAttrs="searchFormInputAttrs"
                     ref="ChildSearchForm"
@@ -180,6 +181,9 @@ export default {
       filterVal: ['code', 'name', 'note'],//当前页面列表的表头属性数组，导出用
 
       //搜索框相关
+      searchValControlStyle: {//设置通用搜索框的长度等样式 
+        width: '300px',
+      },
       controlStyle: {//设置搜索控件的长度等样式
         width: '300px',
       },

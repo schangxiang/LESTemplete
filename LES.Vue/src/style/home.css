@@ -31,8 +31,8 @@ body {
      max-height: calc(100% - 1px); /*修改收缩后的高度 【EditBy shaocx,2021-02-02】 */
 }
 .content-collapsed{
-    max-width: 100%;
-
+    /* max-width: 100%; */
+    max-width: 96%;  /*修改收缩后的宽度，改为96,设为100会导致右侧有些项显示不出 【EditBy shaocx,2021-02-03】 */
 }
 .el-scrollbar__wrap{
     /*overflow-x: auto !important;*/

@@ -107,7 +107,7 @@ export default {
   methods: {
     //删除图片
     removeLogo () {
-	  if (this.editForm.tdLogo == undefined) {
+      if (this.editForm.tdLogo == undefined) {
         this.$message({
           message: '没有要移除的头像',
           type: 'warning'

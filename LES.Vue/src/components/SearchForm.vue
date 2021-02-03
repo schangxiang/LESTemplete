@@ -13,6 +13,7 @@
         <el-input v-model="formData.searchVal"
                   size="small"
                   class="searchClass"
+                  :style="searchValControlStyle"
                   :placeholder="searchFormInputPlaceholder">
           <div slot="prepend">
             <div class="centerClass">
@@ -77,6 +78,7 @@
                             :currentValMode="formData[item.prop+'_FilterMode']"
                             @currentValModeInput="valueMode => { formData[item.prop+'_FilterMode'] = valueMode }"
                             :controlStyle="controlStyle"
+                            :searchValControlStyle="searchValControlStyle"
                             :itemOptions="item" />
                 </el-form-item>
               </el-scrollbar>
@@ -115,6 +117,10 @@ export default {
     //通用查询配置
     commonSearchOptionSet: {
       type: String,
+      required: true,
+    },
+    searchValControlStyle: {
+      type: Object,
       required: true,
     },
     controlStyle: {

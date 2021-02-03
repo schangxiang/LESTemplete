@@ -407,6 +407,24 @@ export const addInStockRecord = params => {
     return axios.post(`${base}/api/Wip_InStockRecord/post`, params);
 };
 
+// 配置RGV任务方法 
+//分页获取RGV任务列表 
+export const getRgvTaskListPage = params => {
+    return axios.post(`${base}/api/Les_RgvTask/get`, params);
+};
+//删除RGV任务 
+export const removeRgvTask = params => {
+    return axios.delete(`${base}/api/Les_RgvTask/delete`, { params: params });
+};
+//编辑RGV任务 
+export const editRgvTask = params => {
+    return axios.put(`${base}/api/Les_RgvTask/put`, params);
+};
+//添加RGV任务 
+export const addRgvTask = params => {
+    return axios.post(`${base}/api/Les_RgvTask/post`, params);
+};
+
 
 
 
