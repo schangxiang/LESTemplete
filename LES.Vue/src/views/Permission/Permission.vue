@@ -116,7 +116,7 @@
               如果是目录，请填‘-’字符
               <br />如果是按钮，请输入空格即可
               <br />如果是外链，请带上协议，比如 https://www.baidu.com
-              <br />
+              <br />注意：地址区分大小写！！！！
             </div>
             <el-input v-model="editForm.Code"
                       auto-complete="off"></el-input>
