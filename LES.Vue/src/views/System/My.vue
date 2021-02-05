@@ -53,7 +53,7 @@
     <el-form-item>
       <el-button @click="onSubmit"
                  type="primary">更新</el-button>
-      <el-button @click.native.prevent>取消</el-button>
+      <el-button @click="onCancel">取消</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -105,6 +105,12 @@ export default {
     };
   },
   methods: {
+    onCancel () {
+      this.initUserInfo()
+      this.editForm.uLoginPWD = ''
+      this.editForm.uLoginPWDConfirm = ''
+      this.editForm.uLoginPWDNew = ''
+    },
     //删除图片
     removeLogo () {
       if (this.editForm.tdLogo == undefined) {
@@ -238,6 +244,14 @@ export default {
           window.URL.revokeObjectURL(link.href);
         }
       })
+    },
+    initUserInfo () {
+      var user = JSON.parse(window.localStorage.user);
+      //console.log(user)
+      this.editForm.uRealName = user ? user.uRealName : "";
+      this.editForm.uRemark = user ? user.uRemark : "";
+      this.editForm.uID = user ? user.uID : "";
+      this.editForm.tdLogo = user ? user.tdLogo : "";
     }
   },
   mounted () {
@@ -246,12 +260,7 @@ export default {
       Authorization: "Bearer " + tokenStr
     };
 
-    var user = JSON.parse(window.localStorage.user);
-    console.log(user)
-    this.editForm.uRealName = user ? user.uRealName : "";
-    this.editForm.uRemark = user ? user.uRemark : "";
-    this.editForm.uID = user ? user.uID : "";
-    this.editForm.tdLogo = user ? user.tdLogo : "";
+    this.initUserInfo()
   }
 };
 </script>

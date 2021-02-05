@@ -8,15 +8,18 @@
     </ul>
     <div class="bg bg-blur"
          style="display: none;"></div>
-    <div style="height: 20%;"></div>
+    <div style="height: 15%;"></div>
     <el-form :model="ruleForm2"
              :rules="rules2"
              ref="ruleForm2"
              label-position="left"
              label-width="0px"
              size="large"
-             class="demo-ruleForm login-container">
-      <h3 class="title">广州西门子变压器线体管控系统</h3>
+             class="login-container">
+      <div class="head">
+        <div class="login_logo"></div>
+        <h2 class="title">广州西门子变压器线体管控系统</h2>
+      </div>
       <el-form-item prop="account">
         <el-input type="text"
                   prefix-icon="el-icon-user"
@@ -314,6 +317,21 @@ export default {
 </script>
 
 <style>
+/* 登录头样式 */
+.head {
+  margin: -35px -35px 20px -35px;
+  padding-top: 20px;
+  /* background: #adcaec; */
+  /* border-bottom: 1px solid #9bc7d8; */
+  border-radius: 5px 5px 0 0;
+}
+.login_logo {
+  background: url("../assets/page_logo.png") 0 0 no-repeat;
+  width: 214px;
+  height: 88px;
+  background-size: contain;
+  margin: 0 auto;
+}
 .bg {
   margin: 0px;
   position: absolute;
@@ -334,7 +352,7 @@ export default {
   -moz-border-radius: 5px;
   background-clip: padding-box;
   margin: auto;
-  width: 350px;
+  width: 450px;
   padding: 35px 35px 15px 35px;
   background: #fff;
   border: 1px solid #eaeaea;
@@ -344,7 +362,7 @@ export default {
 }
 
 .login-container .title {
-  margin: 0px auto 40px auto;
+  margin: 0px auto 6px auto;
   text-align: center;
   color: #505458;
 }
