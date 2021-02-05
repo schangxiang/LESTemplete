@@ -77,122 +77,282 @@
             <param name="id">主键</param> 
             <returns>删除结果</returns> 
         </member>
-        <member name="T:LES.Core.Api.Controllers.Wip_InStockRecordController">
+        <member name="T:LES.Core.Api.Controllers.Les_InStockRecordController">
             <summary> 
             入库记录控制器 
             </summary> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_InStockRecordController.Get(LES.Core.Model.ParamModels.Wip_InStockRecordParam)">
+        <member name="M:LES.Core.Api.Controllers.Les_InStockRecordController.Get(LES.Core.Model.ParamModels.Les_InStockRecordParam)">
             <summary> 
             分页获取入库记录列表 
             </summary> 
             <param name="param">筛选条件</param> 
             <returns>获取结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_InStockRecordController.Get(System.Int32)">
+        <member name="M:LES.Core.Api.Controllers.Les_InStockRecordController.Get(System.Int32)">
             <summary> 
             获取单个入库记录 
             </summary> 
             <param name="id">主键</param> 
             <returns>获取结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_InStockRecordController.Post(LES.Core.Model.Models.Wip_InStockRecord)">
+        <member name="M:LES.Core.Api.Controllers.Les_InStockRecordController.Post(LES.Core.Model.Models.Les_InStockRecord)">
             <summary> 
             新增入库记录 
             </summary> 
             <param name="request">要新增的入库记录对象</param> 
             <returns></returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_InStockRecordController.Put(LES.Core.Model.Models.Wip_InStockRecord)">
+        <member name="M:LES.Core.Api.Controllers.Les_InStockRecordController.Put(LES.Core.Model.Models.Les_InStockRecord)">
             <summary> 
             更新入库记录 
             </summary> 
             <param name="request">要更新的入库记录对象</param> 
             <returns>更新结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_InStockRecordController.Delete(System.Int32)">
+        <member name="M:LES.Core.Api.Controllers.Les_InStockRecordController.Delete(System.Int32)">
             <summary> 
             删除入库记录 
             </summary> 
             <param name="id">主键</param> 
             <returns>删除结果</returns> 
         </member>
-        <member name="T:LES.Core.Api.Controllers.Wip_OutStockRecordController">
+        <member name="T:LES.Core.Api.Controllers.Les_OutStockRecordController">
             <summary> 
             出库记录控制器 
             </summary> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_OutStockRecordController.Get(LES.Core.Model.ParamModels.Wip_OutStockRecordParam)">
+        <member name="M:LES.Core.Api.Controllers.Les_OutStockRecordController.Get(LES.Core.Model.ParamModels.Les_OutStockRecordParam)">
             <summary> 
             分页获取出库记录列表 
             </summary> 
             <param name="param">筛选条件</param> 
             <returns>获取结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_OutStockRecordController.Get(System.Int32)">
+        <member name="M:LES.Core.Api.Controllers.Les_OutStockRecordController.Get(System.Int32)">
             <summary> 
             获取单个出库记录 
             </summary> 
             <param name="id">主键</param> 
             <returns>获取结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_OutStockRecordController.Post(LES.Core.Model.Models.Wip_OutStockRecord)">
+        <member name="M:LES.Core.Api.Controllers.Les_OutStockRecordController.Post(LES.Core.Model.Models.Les_OutStockRecord)">
             <summary> 
             新增出库记录 
             </summary> 
             <param name="request">要新增的出库记录对象</param> 
             <returns></returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_OutStockRecordController.Put(LES.Core.Model.Models.Wip_OutStockRecord)">
+        <member name="M:LES.Core.Api.Controllers.Les_OutStockRecordController.Put(LES.Core.Model.Models.Les_OutStockRecord)">
             <summary> 
             更新出库记录 
             </summary> 
             <param name="request">要更新的出库记录对象</param> 
             <returns>更新结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_OutStockRecordController.Delete(System.Int32)">
+        <member name="M:LES.Core.Api.Controllers.Les_OutStockRecordController.Delete(System.Int32)">
             <summary> 
             删除出库记录 
             </summary> 
             <param name="id">主键</param> 
             <returns>删除结果</returns> 
         </member>
-        <member name="T:LES.Core.Api.Controllers.Wip_StockInfoController">
+        <member name="T:LES.Core.Api.Controllers.Les_RgvExcepitonController">
+            <summary> 
+            RGV异常控制器 
+            </summary> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvExcepitonController.Get(LES.Core.Model.ParamModels.Les_RgvExcepitonParam)">
+            <summary> 
+            分页获取RGV异常列表 
+            </summary> 
+            <param name="param">筛选条件</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvExcepitonController.Get(System.Int32)">
+            <summary> 
+            获取单个RGV异常 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvExcepitonController.Post(LES.Core.Model.Models.Les_RgvExcepiton)">
+            <summary> 
+            新增RGV异常 
+            </summary> 
+            <param name="request">要新增的RGV异常对象</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvExcepitonController.Put(LES.Core.Model.Models.Les_RgvExcepiton)">
+            <summary> 
+            更新RGV异常 
+            </summary> 
+            <param name="request">要更新的RGV异常对象</param> 
+            <returns>更新结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvExcepitonController.Delete(System.Int32)">
+            <summary> 
+            删除RGV异常 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>删除结果</returns> 
+        </member>
+        <member name="T:LES.Core.Api.Controllers.Les_RgvTaskController">
+            <summary> 
+            RGV任务控制器 
+            </summary> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvTaskController.Get(LES.Core.Model.ParamModels.Les_RgvTaskParam)">
+            <summary> 
+            分页获取RGV任务列表 
+            </summary> 
+            <param name="param">筛选条件</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvTaskController.Get(System.Int32)">
+            <summary> 
+            获取单个RGV任务 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvTaskController.Post(LES.Core.Model.Models.Les_RgvTask)">
+            <summary> 
+            新增RGV任务 
+            </summary> 
+            <param name="request">要新增的RGV任务对象</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvTaskController.Put(LES.Core.Model.Models.Les_RgvTask)">
+            <summary> 
+            更新RGV任务 
+            </summary> 
+            <param name="request">要更新的RGV任务对象</param> 
+            <returns>更新结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Les_RgvTaskController.Delete(System.Int32)">
+            <summary> 
+            删除RGV任务 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>删除结果</returns> 
+        </member>
+        <member name="T:LES.Core.Api.Controllers.Les_StockInfoController">
             <summary> 
             库存信息控制器 
             </summary> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_StockInfoController.Get(LES.Core.Model.ParamModels.Wip_StockInfoParam)">
+        <member name="M:LES.Core.Api.Controllers.Les_StockInfoController.Get(LES.Core.Model.ParamModels.Les_StockInfoParam)">
             <summary> 
             分页获取库存信息列表 
             </summary> 
             <param name="param">筛选条件</param> 
             <returns>获取结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_StockInfoController.Get(System.Int32)">
+        <member name="M:LES.Core.Api.Controllers.Les_StockInfoController.Get(System.Int32)">
             <summary> 
             获取单个库存信息 
             </summary> 
             <param name="id">主键</param> 
             <returns>获取结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_StockInfoController.Post(LES.Core.Model.Models.Wip_StockInfo)">
+        <member name="M:LES.Core.Api.Controllers.Les_StockInfoController.Post(LES.Core.Model.Models.Les_StockInfo)">
             <summary> 
             新增库存信息 
             </summary> 
             <param name="request">要新增的库存信息对象</param> 
             <returns></returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_StockInfoController.Put(LES.Core.Model.Models.Wip_StockInfo)">
+        <member name="M:LES.Core.Api.Controllers.Les_StockInfoController.Put(LES.Core.Model.Models.Les_StockInfo)">
             <summary> 
             更新库存信息 
             </summary> 
             <param name="request">要更新的库存信息对象</param> 
             <returns>更新结果</returns> 
         </member>
-        <member name="M:LES.Core.Api.Controllers.Wip_StockInfoController.Delete(System.Int32)">
+        <member name="M:LES.Core.Api.Controllers.Les_StockInfoController.Delete(System.Int32)">
             <summary> 
             删除库存信息 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>删除结果</returns> 
+        </member>
+        <member name="T:LES.Core.Api.Controllers.Wip_WorkOrderController">
+            <summary> 
+            工单管理控制器 
+            </summary> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkOrderController.Get(LES.Core.Model.ParamModels.Wip_WorkOrderParam)">
+            <summary> 
+            分页获取工单管理列表 
+            </summary> 
+            <param name="param">筛选条件</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkOrderController.Get(System.Int32)">
+            <summary> 
+            获取单个工单管理 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkOrderController.Post(LES.Core.Model.Models.Wip_WorkOrder)">
+            <summary> 
+            新增工单管理 
+            </summary> 
+            <param name="request">要新增的工单管理对象</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkOrderController.Put(LES.Core.Model.Models.Wip_WorkOrder)">
+            <summary> 
+            更新工单管理 
+            </summary> 
+            <param name="request">要更新的工单管理对象</param> 
+            <returns>更新结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkOrderController.Delete(System.Int32)">
+            <summary> 
+            删除工单管理 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>删除结果</returns> 
+        </member>
+        <member name="T:LES.Core.Api.Controllers.Wip_WorkPieceController">
+            <summary> 
+            工件数据控制器 
+            </summary> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkPieceController.Get(LES.Core.Model.ParamModels.Wip_WorkPieceParam)">
+            <summary> 
+            分页获取工件数据列表 
+            </summary> 
+            <param name="param">筛选条件</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkPieceController.Get(System.Int32)">
+            <summary> 
+            获取单个工件数据 
+            </summary> 
+            <param name="id">主键</param> 
+            <returns>获取结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkPieceController.Post(LES.Core.Model.Models.Wip_WorkPiece)">
+            <summary> 
+            新增工件数据 
+            </summary> 
+            <param name="request">要新增的工件数据对象</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkPieceController.Put(LES.Core.Model.Models.Wip_WorkPiece)">
+            <summary> 
+            更新工件数据 
+            </summary> 
+            <param name="request">要更新的工件数据对象</param> 
+            <returns>更新结果</returns> 
+        </member>
+        <member name="M:LES.Core.Api.Controllers.Wip_WorkPieceController.Delete(System.Int32)">
+            <summary> 
+            删除工件数据 
             </summary> 
             <param name="id">主键</param> 
             <returns>删除结果</returns> 
@@ -552,74 +712,6 @@
             重启一个计划任务
             </summary>
             <param name="jobId"></param>
-            <returns></returns>
-        </member>
-        <member name="T:LES.Core.Controllers.TopicController">
-            <summary>
-            类别管理【无权限】
-            </summary>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicController.#ctor(LES.Core.IServices.ITopicServices)">
-            <summary>
-            构造函数
-            </summary>
-            <param name="topicServices"></param>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicController.Get">
-            <summary>
-            获取Tibug所有分类
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:LES.Core.Controllers.TopicDetailController">
-            <summary>
-            Tibug 管理
-            </summary>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicDetailController.#ctor(LES.Core.IServices.ITopicServices,LES.Core.IServices.ITopicDetailServices)">
-            <summary>
-            构造函数
-            </summary>
-            <param name="topicServices"></param>
-            <param name="topicDetailServices"></param>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicDetailController.Get(System.Int32,System.String,System.String,System.Int32)">
-            <summary>
-            获取Bug数据列表（带分页）
-            【无权限】
-            </summary>
-            <param name="page">页数</param>
-            <param name="tname">专题类型</param>
-            <param name="key">关键字</param>
-            <param name="intPageSize"></param>
-            <returns></returns>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicDetailController.Get(System.Int32)">
-            <summary>
-            获取详情【无权限】
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicDetailController.Post(LES.Core.Model.Models.TopicDetail)">
-            <summary>
-            添加一个 BUG 【无权限】
-            </summary>
-            <param name="topicDetail"></param>
-            <returns></returns>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicDetailController.Update(LES.Core.Model.Models.TopicDetail)">
-            <summary>
-            更新 bug
-            </summary>
-            <param name="topicDetail"></param>
-            <returns></returns>
-        </member>
-        <member name="M:LES.Core.Controllers.TopicDetailController.Delete(System.Int32)">
-            <summary>
-            删除 bug
-            </summary>
-            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:LES.Core.Controllers.UserController">

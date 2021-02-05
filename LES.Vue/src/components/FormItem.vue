@@ -217,7 +217,8 @@ export default {
       this.currentValMode2 = ''
     },
     getValues () {
-      if (this.itemOptions.element === 'el-input') {
+      if (this.itemOptions.element === 'el-input'
+        || this.itemOptions.element === 'el-select') {
         return [
           {
             value: '1',

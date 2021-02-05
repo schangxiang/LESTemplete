@@ -10,7 +10,11 @@
           <el-col :span="10"
                   class="logo collapsedLogo"
                   :class="collapsed?'logo-collapse-width':'logo-width'">
-            <div @click="toindex"> {{collapsed?sysNameShort:sysName}}</div>
+            <div @click="toindex"
+                 v-if="collapsed?true:false"> {{collapsed?sysNameShort:sysName}}</div>
+            <img src="./assets/page_logo.png"
+                 v-if="collapsed?false:true"
+                 style="width:200px;height: 90px; margin-left:3px;" />
           </el-col>
           <el-col :span="10"
                   class="logoban">

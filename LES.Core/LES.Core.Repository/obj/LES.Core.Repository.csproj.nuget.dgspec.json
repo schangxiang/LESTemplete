@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj": {}
+    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj": {}
   },
   "projects": {
-    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj": {
+    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj",
+        "projectUniqueName": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj",
         "projectName": "LES.Core.Common",
-        "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj",
+        "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj",
         "packagesPath": "C:\\Users\\schangxiang\\.nuget\\packages\\",
-        "outputPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Common\\obj\\",
+        "outputPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -119,14 +119,14 @@
         }
       }
     },
-    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj": {
+    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj",
+        "projectUniqueName": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj",
         "projectName": "LES.Core.Model",
-        "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj",
+        "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj",
         "packagesPath": "C:\\Users\\schangxiang\\.nuget\\packages\\",
-        "outputPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Model\\obj\\",
+        "outputPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -146,8 +146,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj": {
-                "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj"
+              "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj": {
+                "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Common\\LES.Core.Common.csproj"
               }
             }
           }
@@ -186,14 +186,14 @@
         }
       }
     },
-    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj": {
+    "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj",
+        "projectUniqueName": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj",
         "projectName": "LES.Core.Repository",
-        "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj",
+        "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Repository\\LES.Core.Repository.csproj",
         "packagesPath": "C:\\Users\\schangxiang\\.nuget\\packages\\",
-        "outputPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Repository\\obj\\",
+        "outputPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -213,8 +213,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj": {
-                "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj"
+              "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj": {
+                "projectPath": "D:\\数瀛信息科技\\公司项目\\广州西门子原材料立体库\\低压线圈\\src\\LES\\LES.Core\\LES.Core.Model\\LES.Core.Model.csproj"
               }
             }
           }

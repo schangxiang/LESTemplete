@@ -635,7 +635,7 @@ export default {
       this.$refs.editForm.validate(valid => {
         if (valid) {
           this.$confirm("确认提交吗？", "提示", {}).then(() => {
-            debugger
+            //debugger
             this.editLoading = true;
             //NProgress.start();
             let para = Object.assign({}, this.editForm);

@@ -250,11 +250,6 @@ export const addModule = params => {
     return axios.post(`${base}/api/module/post`, params);
 };
 
-//在制品查询
-export const getWipHistoryPage = params => {
-    return axios.get(`${base}/api/wip/get`, { params: params });
-};
-
 // 菜单模块管理
 export const getPermissionListPage = params => {
     return axios.get(`${base}/api/permission/get`, { params: params });
@@ -285,18 +280,39 @@ export const getNavigationBar = params => {
     return axios.get(`${base}/api/permission/GetNavigationBar`, { params: params }).then(res => res.data);
 };
 
-// Bug模块管理
-export const getBugListPage = params => {
-    return axios.get(`${base}/api/TopicDetail/get`, { params: params });
+// 配置工单管理方法 
+//分页获取工单管理列表 
+export const getWorkOrderListPage = params => {
+    return axios.post(`${base}/api/Wip_WorkOrder/get`, params);
 };
-export const removeBug = params => {
-    return axios.delete(`${base}/api/TopicDetail/delete`, { params: params });
+//删除工单管理 
+export const removeWorkOrder = params => {
+    return axios.delete(`${base}/api/Wip_WorkOrder/delete`, { params: params });
 };
-export const editBug = params => {
-    return axios.put(`${base}/api/TopicDetail/update`, params);
+//编辑工单管理 
+export const editWorkOrder = params => {
+    return axios.put(`${base}/api/Wip_WorkOrder/put`, params);
 };
-export const addBug = params => {
-    return axios.post(`${base}/api/TopicDetail/post`, params);
+//添加工单管理 
+export const addWorkOrder = params => {
+    return axios.post(`${base}/api/Wip_WorkOrder/post`, params);
+};
+// 配置工件数据方法 
+//分页获取工件数据列表 
+export const getWorkPieceListPage = params => {
+    return axios.post(`${base}/api/Wip_WorkPiece/get`, params);
+};
+//删除工件数据 
+export const removeWorkPiece = params => {
+    return axios.delete(`${base}/api/Wip_WorkPiece/delete`, { params: params });
+};
+//编辑工件数据 
+export const editWorkPiece = params => {
+    return axios.put(`${base}/api/Wip_WorkPiece/put`, params);
+};
+//添加工件数据 
+export const addWorkPiece = params => {
+    return axios.post(`${base}/api/Wip_WorkPiece/post`, params);
 };
 
 // 基础数据-码表集管理
@@ -361,50 +377,50 @@ export const addStation = params => {
 
 // 配置库存信息方法 
 export const getStockInfoListPage = params => {
-    return axios.post(`${base}/api/Wip_StockInfo/get`, params);
+    return axios.post(`${base}/api/Les_StockInfo/get`, params);
 };
 export const removeStockInfo = params => {
-    return axios.delete(`${base}/api/Wip_StockInfo/delete`, { params: params });
+    return axios.delete(`${base}/api/Les_StockInfo/delete`, { params: params });
 };
 export const editStockInfo = params => {
-    return axios.put(`${base}/api/Wip_StockInfo/put`, params);
+    return axios.put(`${base}/api/Les_StockInfo/put`, params);
 };
 export const addStockInfo = params => {
-    return axios.post(`${base}/api/Wip_StockInfo/post`, params);
+    return axios.post(`${base}/api/Les_StockInfo/post`, params);
 };
 // 配置出库记录方法 
 //分页获取出库记录列表 
 export const getOutStockRecordListPage = params => {
-    return axios.post(`${base}/api/Wip_OutStockRecord/get`, params);
+    return axios.post(`${base}/api/Les_OutStockRecord/get`, params);
 };
 //删除出库记录 
 export const removeOutStockRecord = params => {
-    return axios.delete(`${base}/api/Wip_OutStockRecord/delete`, { params: params });
+    return axios.delete(`${base}/api/Les_OutStockRecord/delete`, { params: params });
 };
 //编辑出库记录 
 export const editOutStockRecord = params => {
-    return axios.put(`${base}/api/Wip_OutStockRecord/put`, params);
+    return axios.put(`${base}/api/Les_OutStockRecord/put`, params);
 };
 //添加出库记录 
 export const addOutStockRecord = params => {
-    return axios.post(`${base}/api/Wip_OutStockRecord/post`, params);
+    return axios.post(`${base}/api/Les_OutStockRecord/post`, params);
 };
 // 配置入库记录方法 
 //分页获取入库记录列表 
 export const getInStockRecordListPage = params => {
-    return axios.post(`${base}/api/Wip_InStockRecord/get`, params);
+    return axios.post(`${base}/api/Les_InStockRecord/get`, params);
 };
 //删除入库记录 
 export const removeInStockRecord = params => {
-    return axios.delete(`${base}/api/Wip_InStockRecord/delete`, { params: params });
+    return axios.delete(`${base}/api/Les_InStockRecord/delete`, { params: params });
 };
 //编辑入库记录 
 export const editInStockRecord = params => {
-    return axios.put(`${base}/api/Wip_InStockRecord/put`, params);
+    return axios.put(`${base}/api/Les_InStockRecord/put`, params);
 };
 //添加入库记录 
 export const addInStockRecord = params => {
-    return axios.post(`${base}/api/Wip_InStockRecord/post`, params);
+    return axios.post(`${base}/api/Les_InStockRecord/post`, params);
 };
 
 // 配置RGV任务方法 
@@ -423,6 +439,23 @@ export const editRgvTask = params => {
 //添加RGV任务 
 export const addRgvTask = params => {
     return axios.post(`${base}/api/Les_RgvTask/post`, params);
+};
+// 配置RGV异常方法 
+//分页获取RGV异常列表 
+export const getRgvExcepitonListPage = params => {
+    return axios.post(`${base}/api/Les_RgvExcepiton/get`, params);
+};
+//删除RGV异常 
+export const removeRgvExcepiton = params => {
+    return axios.delete(`${base}/api/Les_RgvExcepiton/delete`, { params: params });
+};
+//编辑RGV异常 
+export const editRgvExcepiton = params => {
+    return axios.put(`${base}/api/Les_RgvExcepiton/put`, params);
+};
+//添加RGV异常 
+export const addRgvExcepiton = params => {
+    return axios.post(`${base}/api/Les_RgvExcepiton/post`, params);
 };
 
 

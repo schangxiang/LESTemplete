@@ -14,10 +14,12 @@
              ref="ruleForm2"
              label-position="left"
              label-width="0px"
+             size="large"
              class="demo-ruleForm login-container">
-      <h3 class="title">欢迎登录LES</h3>
+      <h3 class="title">广州西门子变压器线体管控系统</h3>
       <el-form-item prop="account">
         <el-input type="text"
+                  prefix-icon="el-icon-user"
                   v-model="ruleForm2.account"
                   auto-complete="off"
                   placeholder="账号"></el-input>
@@ -25,6 +27,7 @@
       <el-form-item prop="checkPass">
         <el-input v-model="ruleForm2.checkPass"
                   auto-complete="off"
+                  prefix-icon="el-icon-lock"
                   show-password
                   placeholder="密码"></el-input>
       </el-form-item>
@@ -119,7 +122,7 @@ export default {
         this.ruleForm2.account = "xiangzi";
         this.ruleForm2.checkPass = "1111";
       } else {
-        this.ruleForm2.account = "blogadmin";
+        this.ruleForm2.account = "admin";
         this.ruleForm2.checkPass = "blogadmin";
       }
     },
@@ -243,7 +246,7 @@ export default {
         } else {
           // _this.closeAlert()
           // _this.openAlert("接收到用户数据，开始初始化路由树...")
-          _this.loginStr = "接收到用户数据，开始初始化路由树...";
+          _this.loginStr = "验证成功，登录中...";
 
 
           window.localStorage.user = JSON.stringify(data.response)

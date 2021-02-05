@@ -9,3 +9,14 @@ D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线�
 D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.dll
 D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\ref\LES.Core.FrameWork.dll
 D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.pdb
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\bin\Debug\net5.0\LES.Core.FrameWork.deps.json
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\bin\Debug\net5.0\LES.Core.FrameWork.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\bin\Debug\net5.0\ref\LES.Core.FrameWork.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\bin\Debug\net5.0\LES.Core.FrameWork.pdb
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.GeneratedMSBuildEditorConfig.editorconfig
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.AssemblyInfoInputs.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.AssemblyInfo.cs
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.csproj.CoreCompileInputs.cache
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\ref\LES.Core.FrameWork.dll
+D:\数瀛信息科技\公司项目\广州西门子原材料立体库\低压线圈\src\LES\LES.Core\LES.Core.FrameWork\obj\Debug\net5.0\LES.Core.FrameWork.pdb

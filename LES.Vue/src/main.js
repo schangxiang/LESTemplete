@@ -23,7 +23,7 @@ Vue.use(ElementUI, {
 // import Mock from './mock'
 // Mock.bootstrap();
 
-import 'font-awesome/css/font-awesome.min.css'
+import 'font-awesome/css/font-awesome.min.css' //引入font-awesome图标
 
 
 Vue.config.productionTip = false

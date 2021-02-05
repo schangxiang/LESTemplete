@@ -36,7 +36,7 @@ body {
 }
 .el-scrollbar__wrap{
     /*overflow-x: auto !important;*/
-    /*设定内容页的底部宽度，注意要加上!important才可以，因为在该标签上已经有地方修改了样式,【EditBy shaocx,2021-02-02】*/
+    /*设定内容页的底部宽度，注意要加上!important才可以，原来是 -17px,因为在该标签上已经有地方修改了样式,【EditBy shaocx,2021-02-02】*/
     /* margin-bottom: -17px !important; */
 }
 
@@ -70,7 +70,7 @@ body {
 .container .header .logo {
     height: 60px;
     font-size: 22px;
-    padding-left: 20px;
+    /* padding-left: 20px; */ /* 注释掉这个地方，因为这个地方要放图片 【EditBy shaocx,2021-02-03】 */
     padding-right: 20px;
     border-color: rgba(238, 241, 146, 0.3);
     border-right-width: 1px;

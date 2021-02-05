@@ -416,232 +416,432 @@
             修改时间
             </summary>
         </member>
-        <member name="T:LES.Core.Model.Models.Wip_InStockRecord">
+        <member name="T:LES.Core.Model.Models.Les_InStockRecord">
             <summary>
             入库记录
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.CallMaterialCode">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.CallMaterialCode">
             <summary>
             叫料单号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.SalverCode">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.SalverCode">
             <summary>
             托盘号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.WorkOrderCode">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.WorkOrderCode">
             <summary>
             工单号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.SKU">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.SKU">
             <summary>
             SKU
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.CargoCode">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.CargoCode">
             <summary>
             货物编号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.CargoName">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.CargoName">
             <summary>
             货物名称
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.CargoNum">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.CargoNum">
             <summary>
             货物数量
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.InStockDate">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.InStockDate">
             <summary>
             入库时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.OperationRemark">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.OperationRemark">
             <summary>
             操作说明
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.CreateId">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.CreateId">
             <summary>
             创建ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.CreateBy">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.CreateBy">
             <summary>
             创建者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.CreateTime">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.CreateTime">
             <summary>
             创建时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.ModifyId">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.ModifyId">
             <summary>
             修改ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.ModifyBy">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.ModifyBy">
             <summary>
             修改者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_InStockRecord.ModifyTime">
+        <member name="P:LES.Core.Model.Models.Les_InStockRecord.ModifyTime">
             <summary>
             修改时间
             </summary>
         </member>
-        <member name="T:LES.Core.Model.Models.Wip_OutStockRecord">
+        <member name="T:LES.Core.Model.Models.Les_OutStockRecord">
             <summary>
             出库记录
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.CallMaterialCode">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.CallMaterialCode">
             <summary>
             叫料单号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.SalverCode">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.SalverCode">
             <summary>
             托盘号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.WorkOrderCode">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.WorkOrderCode">
             <summary>
             工单号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.SKU">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.SKU">
             <summary>
             SKU
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.CargoCode">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.CargoCode">
             <summary>
             货物编号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.CargoName">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.CargoName">
             <summary>
             货物名称
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.CargoNum">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.CargoNum">
             <summary>
             货物数量
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.InStockDate">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.OutStockDate">
             <summary>
-            入库时间
+            出库时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.OperationRemark">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.OperationRemark">
             <summary>
             操作说明
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.CreateId">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.CreateId">
             <summary>
             创建ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.CreateBy">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.CreateBy">
             <summary>
             创建者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.CreateTime">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.CreateTime">
             <summary>
             创建时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.ModifyId">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.ModifyId">
             <summary>
             修改ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.ModifyBy">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.ModifyBy">
             <summary>
             修改者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_OutStockRecord.ModifyTime">
+        <member name="P:LES.Core.Model.Models.Les_OutStockRecord.ModifyTime">
             <summary>
             修改时间
             </summary>
         </member>
-        <member name="T:LES.Core.Model.Models.Wip_StockInfo">
+        <member name="T:LES.Core.Model.Models.Les_StockInfo">
             <summary>
             库存表
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.SKU">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.SKU">
             <summary>
             SKU
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.CargoCode">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.CargoCode">
             <summary>
             货物编号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.CargoName">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.CargoName">
             <summary>
             货物名称
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.CargoNum">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.CargoNum">
             <summary>
             货物数量
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.ValidityDate">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.ValidityDate">
             <summary>
             有效期
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.InStockDate">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.InStockDate">
             <summary>
             入库时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.OperationRemark">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.OperationRemark">
             <summary>
             操作说明
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.CreateId">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.CreateId">
             <summary>
             创建ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.CreateBy">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.CreateBy">
             <summary>
             创建者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.CreateTime">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.CreateTime">
             <summary>
             创建时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.ModifyId">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.ModifyId">
             <summary>
             修改ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.ModifyBy">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.ModifyBy">
             <summary>
             修改者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.Models.Wip_StockInfo.ModifyTime">
+        <member name="P:LES.Core.Model.Models.Les_StockInfo.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:LES.Core.Model.Models.Les_RgvExcepiton">
+            <summary>
+            RGV异常信息
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.TaskNo">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.CallOrderNo">
+            <summary>
+            叫料单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.SourcePlaceNo">
+            <summary>
+            起始点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.SourcePlaceName">
+            <summary>
+            起始点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.ToPlaceNo">
+            <summary>
+            目标点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.ToPlaceName">
+            <summary>
+            目标点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.TaskCreateTime">
+            <summary>
+            任务创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.TaskIssueTime">
+            <summary>
+            下发时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.TaskFinishTime">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.DoType">
+            <summary>
+            处理措施
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.ExcepitonMsg">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvExcepiton.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:LES.Core.Model.Models.Les_RgvTask">
+            <summary>
+            RGV任务
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.TaskNo">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.CallOrderNo">
+            <summary>
+            叫料单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.SourcePlaceNo">
+            <summary>
+            起始点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.SourcePlaceName">
+            <summary>
+            起始点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.ToPlaceNo">
+            <summary>
+            目标点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.ToPlaceName">
+            <summary>
+            目标点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.TaskCreateTime">
+            <summary>
+            任务创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.TaskIssueTime">
+            <summary>
+            下发时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.TaskFinishTime">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Les_RgvTask.ModifyTime">
             <summary>
             修改时间
             </summary>
@@ -1166,16 +1366,6 @@
             创建时间
             </summary>
         </member>
-        <member name="T:LES.Core.Model.Models.Topic">
-            <summary>
-            Tibug 类别
-            </summary>
-        </member>
-        <member name="T:LES.Core.Model.Models.TopicDetail">
-            <summary>
-            Tibug 博文
-            </summary>
-        </member>
         <member name="T:LES.Core.Model.Models.UserRole">
             <summary>
             用户跟角色关联表
@@ -1216,10 +1406,166 @@
             修改时间
             </summary>
         </member>
+        <member name="T:LES.Core.Model.Models.Wip_WorkOrder">
+            <summary>
+            工单数据
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.WorkOrderNo">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.PlanNo">
+            <summary>
+            计划单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.SKU">
+            <summary>
+            SKU
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.Quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.PlanTime">
+            <summary>
+            计划时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.ProductionIndex">
+            <summary>
+            生产序号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkOrder.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:LES.Core.Model.Models.Wip_WorkPiece">
+            <summary>
+            工件数据
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkPiece.WorkPieceNo">
+            <summary>
+            工件码
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkPiece.WorkOrderNo">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkPiece.WorkPieceName">
+            <summary>
+            工件名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkPiece.FirstPlacing">
+            <summary>
+            一次浇筑
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkPiece.SecondPlacing">
+            <summary>
+            二次浇筑
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkPiece.Solidify">
+            <summary>
+            固化
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.Models.Wip_WorkPiece.AuditTime">
+            <summary>
+            审核时间
+            </summary>
+        </member>
         <member name="P:LES.Core.Model.RootEntity.Id">
             <summary>
             ID
             </summary>
+        </member>
+        <member name="T:LES.Core.Model.GeneralBusinessRoot`1">
+            <summary>
+            业务通用的父类
+            </summary>
+            <typeparam name="Tkey"></typeparam>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.CreateId">
+            <summary>
+            创建ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.GeneralBusinessRoot`1.IsDeleted">
+             <summary>
+            获取或设置是否禁用，逻辑上的删除，非物理删除
+             </summary>
         </member>
         <member name="T:LES.Core.Model.ModulePermissionRoot`1">
             <summary>
@@ -1299,11 +1645,6 @@
             <summary>
             uID
             泛型主键Tkey
-            </summary>
-        </member>
-        <member name="T:LES.Core.Model.TopicDetailRoot`1">
-            <summary>
-            Tibug 博文
             </summary>
         </member>
         <member name="T:LES.Core.Model.UserRoleRoot`1">
@@ -1652,6 +1993,741 @@
             修改时间
             </summary>
         </member>
+        <member name="T:LES.Core.Model.ParamModels.Les_InStockRecordParam">
+            <summary> 
+            查询入库记录类 
+            </summary> 
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CallMaterialCode">
+            <summary>
+            叫料单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CallMaterialCode_FilterMode">
+            <summary>
+            叫料单号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.SalverCode">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.SalverCode_FilterMode">
+            <summary>
+            托盘号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.WorkOrderCode">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.WorkOrderCode_FilterMode">
+            <summary>
+            工单号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.SKU">
+            <summary>
+            SKU
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.SKU_FilterMode">
+            <summary>
+            SKU-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CargoCode">
+            <summary>
+            货物编号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CargoCode_FilterMode">
+            <summary>
+            货物编号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CargoName">
+            <summary>
+            货物名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CargoName_FilterMode">
+            <summary>
+            货物名称-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CargoNum">
+            <summary>
+            货物数量
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CargoNum_FilterMode">
+            <summary>
+            货物数量-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.InStockDate">
+            <summary>
+            入库时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.OperationRemark_FilterMode">
+            <summary>
+            操作说明-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CreateId">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CreateId_FilterMode">
+            <summary>
+            创建者ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CreateBy_FilterMode">
+            <summary>
+            创建者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.ModifyId_FilterMode">
+            <summary>
+            修改ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.ModifyBy_FilterMode">
+            <summary>
+            修改者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_InStockRecordParam.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:LES.Core.Model.ParamModels.Les_OutStockRecordParam">
+            <summary> 
+            查询出库记录类 
+            </summary> 
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CallMaterialCode">
+            <summary>
+            叫料单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CallMaterialCode_FilterMode">
+            <summary>
+            叫料单号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.SalverCode">
+            <summary>
+            托盘号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.SalverCode_FilterMode">
+            <summary>
+            托盘号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.WorkOrderCode">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.WorkOrderCode_FilterMode">
+            <summary>
+            工单号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.SKU">
+            <summary>
+            SKU
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.SKU_FilterMode">
+            <summary>
+            SKU-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CargoCode">
+            <summary>
+            货物编号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CargoCode_FilterMode">
+            <summary>
+            货物编号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CargoName">
+            <summary>
+            货物名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CargoName_FilterMode">
+            <summary>
+            货物名称-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CargoNum">
+            <summary>
+            货物数量
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CargoNum_FilterMode">
+            <summary>
+            货物数量-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.OutStockDate">
+            <summary>
+            出库时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.OperationRemark_FilterMode">
+            <summary>
+            操作说明-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CreateId">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CreateId_FilterMode">
+            <summary>
+            创建者ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CreateBy_FilterMode">
+            <summary>
+            创建者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.ModifyId_FilterMode">
+            <summary>
+            修改ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.ModifyBy_FilterMode">
+            <summary>
+            修改者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_OutStockRecordParam.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:LES.Core.Model.ParamModels.Les_RgvExcepitonParam">
+            <summary> 
+            查询RGV异常类 
+            </summary> 
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskNo">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskNo_FilterMode">
+            <summary>
+            任务号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskType_FilterMode">
+            <summary>
+            任务类型-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.CallOrderNo">
+            <summary>
+            叫料单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.CallOrderNo_FilterMode">
+            <summary>
+            叫料单号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.SourcePlaceNo">
+            <summary>
+            起始点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.SourcePlaceNo_FilterMode">
+            <summary>
+            起始点-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.SourcePlaceName">
+            <summary>
+            起始点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.SourcePlaceName_FilterMode">
+            <summary>
+            起始点名称-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ToPlaceNo">
+            <summary>
+            目标点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ToPlaceNo_FilterMode">
+            <summary>
+            目标点-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ToPlaceName">
+            <summary>
+            目标点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ToPlaceName_FilterMode">
+            <summary>
+            目标点名称-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskStatus_FilterMode">
+            <summary>
+            任务状态-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskCreateTime">
+            <summary>
+            任务创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskIssueTime">
+            <summary>
+            下发时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.TaskFinishTime">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.DoType">
+            <summary>
+            处理措施
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.DoType_FilterMode">
+            <summary>
+            处理措施-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ExcepitonMsg">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ExcepitonMsg_FilterMode">
+            <summary>
+            异常信息-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.OperationRemark_FilterMode">
+            <summary>
+            操作说明-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.CreateId">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.CreateId_FilterMode">
+            <summary>
+            创建者ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.CreateBy_FilterMode">
+            <summary>
+            创建者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ModifyId">
+            <summary>
+            修改者ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ModifyId_FilterMode">
+            <summary>
+            修改者ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ModifyBy_FilterMode">
+            <summary>
+            修改者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvExcepitonParam.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:LES.Core.Model.ParamModels.Les_RgvTaskParam">
+            <summary> 
+            查询RGV任务类 
+            </summary> 
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskNo">
+            <summary>
+            任务号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskNo_FilterMode">
+            <summary>
+            任务号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskType">
+            <summary>
+            任务类型
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskType_FilterMode">
+            <summary>
+            任务类型-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.CallOrderNo">
+            <summary>
+            叫料单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.CallOrderNo_FilterMode">
+            <summary>
+            叫料单号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.SourcePlaceNo">
+            <summary>
+            起始点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.SourcePlaceNo_FilterMode">
+            <summary>
+            起始点-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.SourcePlaceName">
+            <summary>
+            起始点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.SourcePlaceName_FilterMode">
+            <summary>
+            起始点名称-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ToPlaceNo">
+            <summary>
+            目标点
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ToPlaceNo_FilterMode">
+            <summary>
+            目标点-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ToPlaceName">
+            <summary>
+            目标点名称
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ToPlaceName_FilterMode">
+            <summary>
+            目标点名称-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskStatus">
+            <summary>
+            任务状态
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskStatus_FilterMode">
+            <summary>
+            任务状态-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskCreateTime">
+            <summary>
+            任务创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskIssueTime">
+            <summary>
+            下发时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.TaskFinishTime">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.OperationRemark_FilterMode">
+            <summary>
+            操作说明-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.CreateId">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.CreateId_FilterMode">
+            <summary>
+            创建者ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.CreateBy_FilterMode">
+            <summary>
+            创建者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ModifyId">
+            <summary>
+            修改者ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ModifyId_FilterMode">
+            <summary>
+            修改者ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ModifyBy_FilterMode">
+            <summary>
+            修改者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_RgvTaskParam.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="T:LES.Core.Model.ParamModels.Les_StockInfoParam">
+            <summary> 
+            查询库存信息类 
+            </summary> 
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.SKU">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.SKU_FilterMode">
+            <summary>
+            -查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CargoCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CargoCode_FilterMode">
+            <summary>
+            -查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CargoName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CargoName_FilterMode">
+            <summary>
+            -查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CargoNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CargoNum_FilterMode">
+            <summary>
+            -查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.ValidityDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.InStockDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.OperationRemark">
+            <summary>
+            操作说明
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.OperationRemark_FilterMode">
+            <summary>
+            操作说明-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CreateId">
+            <summary>
+            创建者ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CreateId_FilterMode">
+            <summary>
+            创建者ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CreateBy">
+            <summary>
+            创建者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CreateBy_FilterMode">
+            <summary>
+            创建者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.ModifyId">
+            <summary>
+            修改ID
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.ModifyId_FilterMode">
+            <summary>
+            修改ID-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.ModifyBy">
+            <summary>
+            修改者
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.ModifyBy_FilterMode">
+            <summary>
+            修改者-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Les_StockInfoParam.ModifyTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
         <member name="T:LES.Core.Model.ParamModels.ModulesParam">
             <summary> 
             查询模块管理类 
@@ -1942,397 +3018,252 @@
             角色名
             </summary>
         </member>
-        <member name="T:LES.Core.Model.ParamModels.Wip_InStockRecordParam">
+        <member name="T:LES.Core.Model.ParamModels.Wip_WorkOrderParam">
             <summary> 
-            查询入库记录类 
+            查询工单管理类 
             </summary> 
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CallMaterialCode">
-            <summary>
-            叫料单号
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CallMaterialCode_FilterMode">
-            <summary>
-            叫料单号-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.SalverCode">
-            <summary>
-            托盘号
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.SalverCode_FilterMode">
-            <summary>
-            托盘号-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.WorkOrderCode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.WorkOrderNo">
             <summary>
             工单号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.WorkOrderCode_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.WorkOrderNo_FilterMode">
             <summary>
             工单号-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.SKU">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.PlanNo">
+            <summary>
+            计划单号
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.PlanNo_FilterMode">
+            <summary>
+            计划单号-查询过滤模式 
+            </summary>
+        </member>
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.SKU">
             <summary>
             SKU
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.SKU_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.SKU_FilterMode">
             <summary>
             SKU-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CargoCode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.Quantity">
             <summary>
-            货物编号
+            数量
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CargoCode_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.Quantity_FilterMode">
             <summary>
-            货物编号-查询过滤模式 
+            数量-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CargoName">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.PlanTime">
             <summary>
-            货物名称
+            计划时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CargoName_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.ProductionIndex">
             <summary>
-            货物名称-查询过滤模式 
+            生产序号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CargoNum">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.ProductionIndex_FilterMode">
             <summary>
-            货物数量
+            生产序号-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CargoNum_FilterMode">
-            <summary>
-            货物数量-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.InStockDate">
-            <summary>
-            入库时间
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.OperationRemark">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.OperationRemark">
             <summary>
             操作说明
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.OperationRemark_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.OperationRemark_FilterMode">
             <summary>
             操作说明-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CreateId">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.CreateId">
             <summary>
             创建者ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CreateId_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.CreateId_FilterMode">
             <summary>
             创建者ID-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CreateBy">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.CreateBy">
             <summary>
             创建者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CreateBy_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.CreateBy_FilterMode">
             <summary>
             创建者-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.CreateTime">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.CreateTime">
             <summary>
             创建时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.ModifyId">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.ModifyId">
             <summary>
-            修改ID
+            修改者ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.ModifyId_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.ModifyId_FilterMode">
             <summary>
-            修改ID-查询过滤模式 
+            修改者ID-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.ModifyBy">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.ModifyBy">
             <summary>
             修改者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.ModifyBy_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.ModifyBy_FilterMode">
             <summary>
             修改者-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_InStockRecordParam.ModifyTime">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkOrderParam.ModifyTime">
             <summary>
             修改时间
             </summary>
         </member>
-        <member name="T:LES.Core.Model.ParamModels.Wip_OutStockRecordParam">
+        <member name="T:LES.Core.Model.ParamModels.Wip_WorkPieceParam">
             <summary> 
-            查询出库记录类 
+            查询工件数据类 
             </summary> 
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CallMaterialCode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.WorkPieceNo">
             <summary>
-            叫料单号
+            工件码
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CallMaterialCode_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.WorkPieceNo_FilterMode">
             <summary>
-            叫料单号-查询过滤模式 
+            工件码-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.SalverCode">
-            <summary>
-            托盘号
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.SalverCode_FilterMode">
-            <summary>
-            托盘号-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.WorkOrderCode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.WorkOrderNo">
             <summary>
             工单号
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.WorkOrderCode_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.WorkOrderNo_FilterMode">
             <summary>
             工单号-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.SKU">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.WorkPieceName">
             <summary>
-            SKU
+            工件名称
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.SKU_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.WorkPieceName_FilterMode">
             <summary>
-            SKU-查询过滤模式 
+            工件名称-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CargoCode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.FirstPlacing">
             <summary>
-            货物编号
+            一次浇筑
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CargoCode_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.FirstPlacing_FilterMode">
             <summary>
-            货物编号-查询过滤模式 
+            一次浇筑-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CargoName">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.SecondPlacing">
             <summary>
-            货物名称
+            二次浇筑
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CargoName_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.SecondPlacing_FilterMode">
             <summary>
-            货物名称-查询过滤模式 
+            二次浇筑-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CargoNum">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.Solidify">
             <summary>
-            货物数量
+            固化
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CargoNum_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.Solidify_FilterMode">
             <summary>
-            货物数量-查询过滤模式 
+            固化-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.InStockDate">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.AuditTime">
             <summary>
-            入库时间
+            审核时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.OperationRemark">
-            <summary>
-            操作说明
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.OperationRemark_FilterMode">
-            <summary>
-            操作说明-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CreateId">
-            <summary>
-            创建者ID
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CreateId_FilterMode">
-            <summary>
-            创建者ID-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CreateBy">
-            <summary>
-            创建者
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CreateBy_FilterMode">
-            <summary>
-            创建者-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.CreateTime">
-            <summary>
-            创建时间
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.ModifyId">
-            <summary>
-            修改ID
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.ModifyId_FilterMode">
-            <summary>
-            修改ID-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.ModifyBy">
-            <summary>
-            修改者
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.ModifyBy_FilterMode">
-            <summary>
-            修改者-查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_OutStockRecordParam.ModifyTime">
-            <summary>
-            修改时间
-            </summary>
-        </member>
-        <member name="T:LES.Core.Model.ParamModels.Wip_StockInfoParam">
-            <summary> 
-            查询库存信息类 
-            </summary> 
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.SKU">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.SKU_FilterMode">
-            <summary>
-            -查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CargoCode">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CargoCode_FilterMode">
-            <summary>
-            -查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CargoName">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CargoName_FilterMode">
-            <summary>
-            -查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CargoNum">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CargoNum_FilterMode">
-            <summary>
-            -查询过滤模式 
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.ValidityDate">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.InStockDate">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.OperationRemark">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.OperationRemark">
             <summary>
             操作说明
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.OperationRemark_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.OperationRemark_FilterMode">
             <summary>
             操作说明-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CreateId">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.CreateId">
             <summary>
             创建者ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CreateId_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.CreateId_FilterMode">
             <summary>
             创建者ID-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CreateBy">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.CreateBy">
             <summary>
             创建者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CreateBy_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.CreateBy_FilterMode">
             <summary>
             创建者-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.CreateTime">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.CreateTime">
             <summary>
             创建时间
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.ModifyId">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.ModifyId">
             <summary>
-            修改ID
+            修改者ID
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.ModifyId_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.ModifyId_FilterMode">
             <summary>
-            修改ID-查询过滤模式 
+            修改者ID-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.ModifyBy">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.ModifyBy">
             <summary>
             修改者
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.ModifyBy_FilterMode">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.ModifyBy_FilterMode">
             <summary>
             修改者-查询过滤模式 
             </summary>
         </member>
-        <member name="P:LES.Core.Model.ParamModels.Wip_StockInfoParam.ModifyTime">
+        <member name="P:LES.Core.Model.ParamModels.Wip_WorkPieceParam.ModifyTime">
             <summary>
             修改时间
             </summary>

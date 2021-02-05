@@ -1,0 +1,10 @@
+2021-02-04 11:18:31,744| ERROR 
+Error occured seeding the Database.
+One or more errors occurred. (1、如果使用的是Mysql，生成的数据库字段字符集可能不是utf8的，手动修改下，或者尝试方案：删掉数据库，在连接字符串后加上CharSet=UTF8mb4，重新生成数据库. 
+ 2、其他错误：第 5 个列、参数或变量: 不能对数据类型 bit 指定列宽。)
+--------------------------------
+2021-02-04 11:18:56,940| ERROR 
+Error occured seeding the Database.
+One or more errors occurred. (1、如果使用的是Mysql，生成的数据库字段字符集可能不是utf8的，手动修改下，或者尝试方案：删掉数据库，在连接字符串后加上CharSet=UTF8mb4，重新生成数据库. 
+ 2、其他错误：第 5 个列、参数或变量: 不能对数据类型 bit 指定列宽。)
+--------------------------------

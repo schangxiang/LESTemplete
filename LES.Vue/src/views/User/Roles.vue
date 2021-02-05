@@ -214,8 +214,8 @@ export default {
       //导出组件相关 
       exportFileName: '角色管理信息',//要导出的文件名 
       currentPageData: [],//当前页面的列表数据 
-      tHeader: ['角色名', '说明'],//当前页面列表的表头汉字数组，导出用 
-      filterVal: ['Name', 'Description'],//当前页面列表的表头属性数组，导出用 
+      tHeader: ['角色名', '说明', '创建人'],//当前页面列表的表头汉字数组，导出用 
+      filterVal: ['Name', 'Description', 'CreateBy'],//当前页面列表的表头属性数组，导出用 
 
       //搜索框相关 
       ChildSearchForm: {},
