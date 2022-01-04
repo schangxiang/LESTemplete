@@ -35,24 +35,37 @@ export default {
   methods: {
     setIcon (item) {
       if (item.Func) {
-        if (item.Func.toLowerCase().indexOf('handleDel'.toLowerCase()) != -1) {
+        if (item.Func.toLowerCase().indexOf('handledel'.toLowerCase()) != -1) {
           return 'el-icon-delete'
-        } else if (item.Func.toLowerCase().indexOf('handleEdit'.toLowerCase()) != -1) {
+        } else if (item.Func.toLowerCase().indexOf('handleedit'.toLowerCase()) != -1) {
           return 'el-icon-edit'
-        } else if (item.Func.toLowerCase().indexOf('handleAdd'.toLowerCase()) != -1) {
+        } else if (item.Func.toLowerCase().indexOf('handleadd'.toLowerCase()) != -1) {
           return 'el-icon-plus'
         } else if (item.Func.toLowerCase().indexOf('get') != -1) {
           return 'el-icon-search'
         } else if (item.Func.toLowerCase().indexOf('export') != -1) {
-          return 'el-icon-upload2'
-        } else if (item.Func.toLowerCase().indexOf('import') != -1) {
           return 'el-icon-download'
+        } else if (item.Func.toLowerCase().indexOf('import') != -1) {
+          return 'el-icon-upload2'
+        } else if (item.Func.toLowerCase().indexOf('handleview') != -1) {
+          return 'el-icon-view'
         }
-        return item.iconCls
+        return 'fa ' + item.iconCls
       }
     },
     setType (item) {
-      return item.Func && (item.Func.toLowerCase().indexOf('handledel') != -1 || item.Func.toLowerCase().indexOf('stop') != -1) ? 'danger' : 'primary'
+      if (item.ButtonType != undefined && item.ButtonType != '') {
+        return item.ButtonType
+      } else {
+        if (item.Func != undefined && item.Func != '') {
+          if ((item.Func.toLowerCase().indexOf('handledel') != -1 || item.Func.toLowerCase().indexOf('delete') != -1 || item.Func.toLowerCase().indexOf('stop') != -1)) {
+            return 'danger'
+          } else if (item.Func.toLowerCase().indexOf('export') != -1) {
+            return 'success'
+          }
+        }
+      }
+      return 'primary'
     },
     callFunc (item) {
       this.$emit("callFunction", item); //将值传给父组件

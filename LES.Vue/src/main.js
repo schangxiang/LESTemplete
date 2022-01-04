@@ -23,10 +23,15 @@ Vue.use(ElementUI, {
 // import Mock from './mock'
 // Mock.bootstrap();
 
-import 'font-awesome/css/font-awesome.min.css' //引入font-awesome图标
+import 'font-awesome/css/font-awesome.min.css' //引入font-awesome图标 //注释，因为跟下面的icons冲突，编译报错【Editby shaocx,2021-05-14】
+import './icons';//icon,引入SVG图片 【Editby shaocx,2021-05-14】
 
 
 Vue.config.productionTip = false
+
+//引入公共变量文件 [EditBy shaocx,2021-05-14]
+import global_ from './components/Global/Global.vue'//引用文件
+Vue.prototype.GLOBAL = global_//挂载到Vue实例上面
 
 new Vue({
     router,

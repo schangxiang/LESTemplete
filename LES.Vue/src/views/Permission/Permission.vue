@@ -33,6 +33,10 @@
       </el-table-column>
       <!-- <el-table-column prop="PnameArr" label="父节点" width="" sortable>
       </el-table-column>-->
+      <el-table-column prop="FllowSystemName"
+                       label="所属系统"
+                       width
+                       sortable></el-table-column>
       <el-table-column prop="Code"
                        label="路由地址"
                        width
@@ -42,8 +46,12 @@
                        width
                        sortable></el-table-column>
       <el-table-column prop="OrderSort"
-                       label="Sort"
-                       width
+                       label="排序"
+                       width="80"
+                       sortable></el-table-column>
+      <el-table-column prop="Icon"
+                       label="图标"
+                       width="150"
                        sortable></el-table-column>
       <el-table-column prop="IsButton"
                        label="是否按钮"
@@ -54,6 +62,10 @@
                   disable-transitions>{{!scope.row.IsButton ? "否":"是"}}</el-tag>
         </template>
       </el-table-column>
+      <el-table-column prop="ButtonType"
+                       label="按钮类型"
+                       width="90"
+                       sortable></el-table-column>
       <el-table-column prop="Func"
                        label="按钮事件"
                        width
@@ -122,6 +134,14 @@
                       auto-complete="off"></el-input>
           </el-tooltip>
         </el-form-item>
+        <el-form-item label="所属系统">
+          <el-radio-group v-model="editForm.FllowSystemName"
+                          @change="clkFllowSystemForEdit">
+            <el-radio label="公共"></el-radio>
+            <el-radio label="低压线圈控制系统"></el-radio>
+            <el-radio label="物流LES系统"></el-radio>
+          </el-radio-group>
+        </el-form-item>
         <el-form-item label="描述"
                       prop="Description">
           <el-input v-model="editForm.Description"
@@ -176,6 +196,21 @@
             </el-select>
           </el-tooltip>
         </el-form-item>
+        <el-form-item label="按钮类型"
+                      prop="ButtonType">
+          <el-select v-model="editForm.ButtonType"
+                     filterable
+                     default-first-option
+                     placeholder="请选择按钮类型">
+            <el-option v-for="item in buttonTypeOptions"
+                       :key="item.value"
+                       :label="item.label"
+                       :value="item.value">
+              <span style="float: left">{{ item.label }}</span>
+              <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
+            </el-option>
+          </el-select>
+        </el-form-item>
         <el-form-item prop="IsHide"
                       label="隐藏菜单"
                       width
@@ -221,10 +256,12 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="editFormVisible = false">取消</el-button>
+        <el-button @click.native="editFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="editSubmit"
-                   :loading="editLoading">提交</el-button>
+                   :loading="editLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
 
@@ -251,6 +288,15 @@
             <el-radio label="按钮"></el-radio>
           </el-radio-group>
         </el-form-item>
+        <el-form-item label="所属系统"
+                      v-if="showFllowSystem">
+          <el-radio-group @change="clkFllowSystem"
+                          v-model="addForm.FllowSystemName">
+            <el-radio label="公共"></el-radio>
+            <el-radio label="低压线圈控制系统"></el-radio>
+            <el-radio label="物流LES系统"></el-radio>
+          </el-radio-group>
+        </el-form-item>
 
         <el-form-item label="路由地址"
                       prop="Code">
@@ -259,7 +305,7 @@
               如果是目录，请填‘-’字符
               <br />如果是按钮，请输入空格即可
               <br />如果是外链，请带上协议，比如 https://www.baidu.com
-              <br />
+              <br />注意：地址区分大小写！！！！
             </div>
             <el-input v-model="addForm.Code"
                       auto-complete="off"></el-input>
@@ -269,6 +315,11 @@
         <el-form-item label="描述"
                       prop="Description">
           <el-input v-model="addForm.Description"
+                    auto-complete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="Icon"
+                      prop="Icon">
+          <el-input v-model="addForm.Icon"
                     auto-complete="off"></el-input>
         </el-form-item>
         <el-form-item label="状态"
@@ -307,6 +358,35 @@
               <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
             </el-option>
           </el-select>
+        </el-form-item>
+        <el-form-item label="按钮类型"
+                      prop="ButtonType">
+          <el-select v-model="addForm.ButtonType"
+                     filterable
+                     default-first-option
+                     placeholder="请选择按钮类型">
+            <el-option v-for="item in buttonTypeOptions"
+                       :key="item.value"
+                       :label="item.label"
+                       :value="item.value">
+              <span style="float: left">{{ item.label }}</span>
+              <span style="float: right; color: #8492a6; font-size: 13px">{{ item.value }}</span>
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="">
+          <el-row>
+            <el-button type="primary"
+                       size="mini">主要按钮</el-button>
+            <el-button type="success"
+                       size="mini">成功按钮</el-button>
+            <el-button type="info"
+                       size="mini">信息按钮</el-button>
+            <el-button type="warning"
+                       size="mini">警告按钮</el-button>
+            <el-button type="danger"
+                       size="mini">危险按钮</el-button>
+          </el-row>
         </el-form-item>
         <el-form-item prop="IsHide"
                       label="是否隐藏"
@@ -354,10 +434,12 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="addFormVisible = false">取消</el-button>
+        <el-button @click.native="addFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="addSubmit"
-                   :loading="addLoading">提交</el-button>
+                   :loading="addLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
   </section>
@@ -382,6 +464,7 @@ export default {
   components: { Toolbar },
   data () {
     return {
+      showFllowSystem: false,
       tableHeight: window.innerHeight - 140, // 控制表格的高度
 
       funcOptions: [
@@ -398,12 +481,38 @@ export default {
           label: '删除'
         },
         {
+          value: 'handleView',
+          label: '查看'
+        },
+        {
           value: 'handleExport',
           label: '导出'
         },
         {
           value: 'handleImport',
           label: '导入'
+        }
+      ],
+      buttonTypeOptions: [
+        {
+          value: 'primary',
+          label: '主要按钮'
+        },
+        {
+          value: 'success',
+          label: '成功按钮'
+        },
+        {
+          value: 'info',
+          label: '信息按钮'
+        },
+        {
+          value: 'warning',
+          label: '警告按钮'
+        },
+        {
+          value: 'danger',
+          label: '危险按钮'
         }
       ],
       buttonList: [],
@@ -479,13 +588,36 @@ export default {
     },
     clkType () {
       this.addForm.IsButton = false;
+      this.showFllowSystem = false;
+      this.addForm.IskeepAlive = false;
       if (this.addForm.MenuType == "页面") {
+        this.showFllowSystem = true;
         this.addForm.Code = "";
+        this.addForm.IskeepAlive = true;//默认创建的页面IskeepAlive为true，表示切换tab页时该页不会自动刷新 【EditBy shaocx,2021-06-28】
       } else if (this.addForm.MenuType == "目录") {
+        this.showFllowSystem = true;
         this.addForm.Code = "-";
       } else if (this.addForm.MenuType == "按钮") {
         this.addForm.Code = " ";
         this.addForm.IsButton = true;
+      }
+    },
+    clkFllowSystem () {
+      if (this.addForm.FllowSystemName == "公共") {
+        this.addForm.FllowSystem = 1;
+      } else if (this.addForm.FllowSystemName == "低压线圈控制系统") {
+        this.addForm.FllowSystem = 2;
+      } else if (this.addForm.FllowSystemName == "物流LES系统") {
+        this.addForm.FllowSystem = 3;
+      }
+    },
+    clkFllowSystemForEdit () {
+      if (this.editForm.FllowSystemName == "公共") {
+        this.editForm.FllowSystem = 1;
+      } else if (this.editForm.FllowSystemName == "低压线圈控制系统") {
+        this.editForm.FllowSystem = 2;
+      } else if (this.editForm.FllowSystemName == "物流LES系统") {
+        this.editForm.FllowSystem = 3;
       }
     },
     callFunction (item) {
@@ -687,6 +819,13 @@ export default {
       let _this = this;
       this.$refs.addForm.validate(valid => {
         if (valid) {
+          if (_this.addForm.MenuType == "页面" && _this.addForm.FllowSystemName == undefined) {
+            this.$message({
+              message: "请选择所属系统",
+              type: "error"
+            });
+            return;
+          }
           this.$confirm("确认提交吗？", "提示", {}).then(() => {
             this.addLoading = true;
             //NProgress.start();

@@ -19,7 +19,7 @@
                     :searchFormInputPlaceholder="searchFormInputPlaceholder"
                     :searchFormInputAttrs="searchFormInputAttrs"
                     ref="ChildSearchForm"
-                    @onSearch="getCodeItems" />
+                    @onSearch="_getCodeItems" />
       </el-form>
     </el-col>
 
@@ -37,8 +37,14 @@
                        align="center"
                        width="50">
       </el-table-column>
-      <el-table-column prop="setCode"
+      <el-table-column prop="Id"
+                       label="ID"
+                       width="50"
+                       align="center">
+      </el-table-column>
+      <el-table-column prop="setCodeCode"
                        label="代码集编码"
+                       width="110"
                        align="center">
       </el-table-column>
       <el-table-column prop="setCodeName"
@@ -47,14 +53,17 @@
       </el-table-column>
       <el-table-column prop="code"
                        label="代码编码"
+                       width="110"
                        align="center">
       </el-table-column>
       <el-table-column prop="name"
                        label="代码名称"
+                       width="110"
                        align="center">
       </el-table-column>
       <el-table-column prop="note"
                        label="说明"
+                       width="110"
                        align="center">
       </el-table-column>
 
@@ -87,6 +96,7 @@
                        :formatter="formatterDateTime">
       </el-table-column>
       <el-table-column label="操作"
+                       fixed="right"
                        width="180"
                        v-if="isShowOperatorColumn">
         <template scope="scope">
@@ -164,18 +174,24 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="addFormVisible = false">取消</el-button>
+        <el-button @click.native="cancelSaveClick"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="SaveData"
-                   :loading="addLoading">提交</el-button>
+                   :loading="addLoading"
+                   icon="fa fa-send">提交</el-button>
+        <el-button type="primary"
+                   v-if="isAdd"
+                   @click.native="continueAddClick"
+                   icon="el-icon-plus"
+                   :loading="addLoading">继续新增</el-button>
       </div>
     </el-dialog>
     <!-- 导出组件 -->
     <ToolbarExport ref="cmToolbarExport"
                    :exportFileName="exportFileName"
-                   :filterVal="filterVal"
                    :currentPageData="currentPageData"
-                   :tHeader="tHeader" />
+                   :exportColumnHeader="exportColumnHeader" />
   </section>
 </template>
 
@@ -187,7 +203,7 @@ import Toolbar from "../../components/ToolbarButton";
 import SearchForm from "../../components/SearchForm";
 import ToolbarExport from "../../components/ToolbarExport";
 import { formatDate, setformOptionsNewValue } from '../../../util/tools'
-import { isShowOperatorButtonCommon, isNeedShowOperatorColumn } from '../../../util/common'
+import { isShowOperatorButtonCommon, isNeedShowOperatorColumn, isMobile } from '../../../util/common'
 
 export default {
   components: { Toolbar, SearchForm, ToolbarExport },//注册子组件
@@ -198,19 +214,18 @@ export default {
       //导出组件相关
       exportFileName: '码表集信息',//要导出的文件名
       currentPageData: [],//当前页面的列表数据
-      tHeader: ['代码编码', '代码名称', '说明'],//当前页面列表的表头汉字数组，导出用
-      filterVal: ['code', 'name', 'note'],//当前页面列表的表头属性数组，导出用
+      exportColumnHeader: { 'code': '代码编码', 'name': '代码名称', 'note': '说明' },//当前页面列表的表头汉字和属性数组，导出用 
 
       //搜索框相关
-      commonSearchOptionSet: "精准",//通用查询的默认配置,"模糊"或"精准"
+      commonSearchOptionSet: "模糊",//通用查询的默认配置,"模糊"或"精准"
       searchValControlStyle: {//设置通用搜索框的长度等样式 
         width: '300px',
       },
       controlStyle: {//设置搜索控件的长度等样式
-        width: '300px',
+        width: '350px',
       },
       labelWidth: "90px",//显示Label的宽度
-      drawerSize: "550px",//drawner宽度设置
+      drawerSize: "600px",//drawner宽度设置
       searchFormInputPlaceholder: '请输入代码编码/名称',//要给子搜索组件传递的值
       searchFormInputAttrs: ['code', 'name'],//要给子搜索组件传递的属性名
       formOptions: [
@@ -335,9 +350,13 @@ export default {
       para.pageSize = this.pageSize
       if (flag === '2') { // 全部导出
         para.page = 1
-        para.pageSize = 10000
+        para.pageSize = 100000
       }
       return para
+    },
+    _getCodeItems () {
+      this.page = 1
+      this.getCodeItems()
     },
     //获取列表
     getCodeItems (formValue) {
@@ -448,6 +467,16 @@ export default {
       this.addForm = {
       };
     },
+    //触发取消按钮
+    cancelSaveClick () {
+      this.$refs['addForm'].resetFields();
+      this.addFormVisible = false;
+      this.getCodeItems();
+    },
+    //触发继续新增按钮
+    continueAddClick () {
+      this.handleAdd()
+    },
     // 更新数据
     SaveData (formName) {
       this.submitDisabled = true
@@ -472,8 +501,6 @@ export default {
                     message: res.data.msg,
                     type: 'success'
                   });
-                  this.$refs['addForm'].resetFields();
-                  this.addFormVisible = false;
                   this.getCodeItems();
                 }
                 else {
@@ -499,9 +526,7 @@ export default {
                     message: res.data.msg,
                     type: 'success'
                   });
-                  this.$refs['addForm'].resetFields();
-                  this.addFormVisible = false;
-                  this.getCodeItems();
+                  this.cancelSaveClick()
                 }
                 else {
                   this.addLoading = false;

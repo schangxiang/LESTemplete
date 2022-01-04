@@ -53,7 +53,8 @@
     <el-form-item>
       <el-button @click="onSubmit"
                  type="primary">更新</el-button>
-      <el-button @click="onCancel">取消</el-button>
+      <el-button @click="onCancel"
+                 icon="fa fa-power-off">取消</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -142,8 +143,9 @@ export default {
     },
     onSubmit () {
       let myEditForm = this.editForm
-      if (!(myEditForm.uLoginPWDNew == undefined || myEditForm.uLoginPWDNew == '')
-        && (myEditForm.uLoginPWDConfirm == undefined || myEditForm.uLoginPWDConfirm == '')) {
+      debugger
+      if (!((myEditForm.uLoginPWDNew == undefined || myEditForm.uLoginPWDNew == '')
+        && (myEditForm.uLoginPWDConfirm == undefined || myEditForm.uLoginPWDConfirm == ''))) {
         //只有都为空的时候，才认为不修改密码
         if (myEditForm.uLoginPWDNew == undefined || myEditForm.uLoginPWDNew == '') {
           this.$message({

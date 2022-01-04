@@ -141,10 +141,12 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="editFormVisible = false">取消</el-button>
+        <el-button @click.native="editFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="editSubmit"
-                   :loading="editLoading">提交</el-button>
+                   :loading="editLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
 
@@ -181,18 +183,19 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="addFormVisible = false">取消</el-button>
+        <el-button @click.native="addFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="addSubmit"
-                   :loading="addLoading">提交</el-button>
+                   :loading="addLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
     <!-- 导出组件 -->
     <ToolbarExport ref="cmToolbarExport"
                    :exportFileName="exportFileName"
-                   :filterVal="filterVal"
                    :currentPageData="currentPageData"
-                   :tHeader="tHeader" />
+                   :exportColumnHeader="exportColumnHeader" />
   </section>
 </template> 
  
@@ -204,7 +207,7 @@ import Toolbar from "../../components/ToolbarButton";
 import SearchForm from "../../components/SearchForm";
 import ToolbarExport from "../../components/ToolbarExport";
 import { formatDate } from '../../../util/tools'
-import { isShowOperatorButtonCommon, isNeedShowOperatorColumn } from '../../../util/common'
+import { isShowOperatorButtonCommon, isNeedShowOperatorColumn, isMobile } from '../../../util/common'
 
 
 export default {
@@ -214,20 +217,19 @@ export default {
       //导出组件相关 
       exportFileName: '角色管理信息',//要导出的文件名 
       currentPageData: [],//当前页面的列表数据 
-      tHeader: ['角色名', '说明', '创建人'],//当前页面列表的表头汉字数组，导出用 
-      filterVal: ['Name', 'Description', 'CreateBy'],//当前页面列表的表头属性数组，导出用 
+      exportColumnHeader: { 'Name': '角色名', 'Description': '说明', 'CreateBy': '创建人' },//当前页面列表的表头汉字和属性数组，导出用 
 
       //搜索框相关 
       ChildSearchForm: {},
-      commonSearchOptionSet: "精准",//通用查询的默认配置,"模糊"或"精准"
+      commonSearchOptionSet: "模糊",//通用查询的默认配置,"模糊"或"精准"
       searchValControlStyle: {//设置通用搜索框的长度等样式 
         width: '300px',
       },
       controlStyle: {//设置搜索控件的长度等样式 
-        width: '200px',
+        width: '350px',
       },
       labelWidth: "90px",//显示Label的宽度 
-      drawerSize: "450px",//drawner宽度设置 
+      drawerSize: "600px",//drawner宽度设置 
       searchFormInputPlaceholder: '请输入角色名/说明',//要给子搜索组件传递的值
       searchFormInputAttrs: ['Name', 'Description'],//要给子搜索组件传递的属性名
       formOptions: [
@@ -348,7 +350,7 @@ export default {
       para.pageSize = this.pageSize
       if (flag === '2') { // 全部导出 
         para.page = 1
-        para.pageSize = 10000
+        para.pageSize = 100000
       }
       return para
     },
@@ -396,7 +398,7 @@ export default {
         });
         return;
       }
-      this.$confirm('确认删除该记录吗?', '提示', {
+      this.$confirm('确认要删除角色 "' + row.Name + '" 吗?', '提示', {
         type: 'warning'
       }).then(() => {
         this.listLoading = true;
@@ -487,6 +489,7 @@ export default {
                 this.editFormVisible = false;
                 this.getRoles();
               } else {
+                this.editLoading = false;
                 this.$message({
                   message: res.data.msg,
                   type: "error"
@@ -542,6 +545,7 @@ export default {
                 this.addFormVisible = false;
                 this.getRoles();
               } else {
+                this.addLoading = false;
                 this.$message({
                   message: res.data.msg,
                   type: "error"

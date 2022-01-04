@@ -4,11 +4,24 @@
 <template>
   <div class="search-form-box">
     <el-form :model="formData"
-             :label-width="labelWidth"
              ref="formRef"
              size="small"
              :inline="true">
-
+      <el-form-item v-for="(item, index) in mp_formOptions"
+                    :key="mp_newKeys[index]"
+                    :prop="item.prop"
+                    style="height:auto;margin:1px 5px 5px 5px;font-size: 16px;"
+                    :label="item.label ? (item.label + '：') : ''"
+                    :rules="item.rules">
+        <formItem ref="SonFormItem"
+                  :hideCommonFilter="hideCommonFilter"
+                  v-model="formData[item.prop]"
+                  :currentValMode="formData[item.prop+'_FilterMode']"
+                  @currentValModeInput="valueMode => { formData[item.prop+'_FilterMode'] = valueMode }"
+                  :controlStyle="controlStyle"
+                  :searchValControlStyle="searchValControlStyle"
+                  :itemOptions="item" />
+      </el-form-item>
       <el-form-item>
         <el-input v-model="formData.searchVal"
                   size="small"
@@ -50,12 +63,12 @@
         <el-link type="primary"
                  @click="showHighFilter"
                  :underline="false">高级</el-link>
-        <el-drawer style="top:140px;height:520px;"
+        <el-drawer style="top:140px;max-height:520px;"
                    :modal="false"
                    :withHeader="false"
                    :size="drawerSize"
                    :close-on-press-escape="true"
-                   :show-close="false"
+                   :show-close="true"
                    :visible.sync="drawer"
                    :direction="direction">
           <div class="popup-right">
@@ -87,7 +100,7 @@
                  class="drawer_footer">
               <el-button class="left"
                          type="text"
-                         size="small"
+                         icon="el-icon-s-unfold"
                          @click="drawer=false">收回</el-button>
               <el-button class="right"
                          icon="el-icon-refresh-left"
@@ -172,6 +185,14 @@ export default {
         return []
       }
     },
+    //主页面上的Form项
+    mp_formOptions: {
+      type: Array,
+      required: true,
+      default () {
+        return []
+      }
+    },
     // 提交按钮项，多个用逗号分隔（search, export, reset）
     btnItems: {
       type: String,
@@ -184,6 +205,8 @@ export default {
 
   data () {
     return {
+      /* 是否隐藏条件运算符 */
+      hideCommonFilter: true,
       drawer: false,
       direction: 'rtl',
       //表单form对象
@@ -207,7 +230,12 @@ export default {
       return this.formOptions.map(v => {
         return createUUID()
       })
-    }
+    },
+    mp_newKeys () {
+      return this.mp_formOptions.map(v => {
+        return createUUID()
+      })
+    },
   },
 
   created () {
@@ -272,6 +300,13 @@ export default {
           obj[v.prop] = '' //注意：初始的时候，必须form对象中的每个属性都赋初始值，否则会导致在【重置】按钮后，输入值输入不上的问题，即绑定脱绑问题
         }
       })
+      this.mp_formOptions.forEach(v => {
+        if (v.initValue !== undefined) {
+          obj[v.prop] = v.initValue
+        } else {
+          obj[v.prop] = '' //注意：初始的时候，必须form对象中的每个属性都赋初始值，否则会导致在【重置】按钮后，输入值输入不上的问题，即绑定脱绑问题
+        }
+      })
       obj.searchVal_FilterMode = '1' //默认是 模糊查询
       if (this.commonSearchOptionSet == '精准') {
         obj.searchVal_FilterMode = '2'
@@ -287,8 +322,10 @@ export default {
     },
     setNewFormOptions (new_formOptions) {
       this.formOptions = new_formOptions
-    }
-
+    },
+    setMPOptions (new_formOptions) {
+      this.mp_formOptions = new_formOptions
+    },
   }
 
 
@@ -350,7 +387,7 @@ export default {
   color: #409eff;
   font-size: 16px;
 }
-
+/* 高级搜索的Lable样式*/
 .searchFormCss {
   font-weight: 700;
   color: #606266;

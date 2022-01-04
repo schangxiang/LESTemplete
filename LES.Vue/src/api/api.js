@@ -302,6 +302,10 @@ export const addWorkOrder = params => {
 export const getWorkPieceListPage = params => {
     return axios.post(`${base}/api/Wip_WorkPiece/get`, params);
 };
+//获取单个工件的详细数据 
+export const getWorkPieceProdRecordDetails = params => {
+    return axios.get(`${base}/api/Wip_WorkPiece/getDetails`, { params: params });
+};
 //删除工件数据 
 export const removeWorkPiece = params => {
     return axios.delete(`${base}/api/Wip_WorkPiece/delete`, { params: params });
@@ -331,10 +335,29 @@ export const addCodeSet = params => {
 export const getAllCodeSets = params => {
     return axios.get(`${base}/api/Base_CodeSets/getAll`, params);
 };
+//公共
+export const getCodeItemsBySetCodeForPublic = params => {
+    return axios.get(`${base}/api/LESPublic/getCodeItemsBySetCode`, { params: params });
+};
+//通过代码编码获取代码项对象
+export const getCodeItemsByCode = params => {
+    return axios.get(`${base}/api/Base_CodeItems/GetCodeItemsByCode`, { params: params });
+};
+//获取枚举列表
+export const getEnumberList = params => {
+    return axios.get(`${base}/api/LESPublic/GetEnumberList`, { params: params });
+};
 
 // 基础数据-码表项管理
 export const getCodeItemsBySetCode = params => {
     return axios.get(`${base}/api/Base_CodeItems/getCodeItemsBySetCode`, { params: params });
+};
+//查询工序列表，使用权限，通过代码集编码获取代码项集合
+export const getCodeItemsBySetCodeForGX = params => {
+    return axios.get(`${base}/api/Base_CodeItems/GetCodeItemsBySetCodeForGX`, { params: params });
+};
+export const getCodeItemsBySetId = params => {
+    return axios.get(`${base}/api/Base_CodeItems/GetCodeItemsBySetId`, { params: params });
 };
 export const getCodeItemListPage = params => {
     return axios.post(`${base}/api/Base_CodeItems/get`, params);
@@ -365,6 +388,12 @@ export const addSalver = params => {
 export const getStationListPage = params => {
     return axios.post(`${base}/api/Base_Station/get`, params);
 };
+export const getSingleStation = params => {
+    return axios.get(`${base}/api/Base_Station/GetSingle`, { params: params });
+};
+export const getMaterialsCodeItemsByProcessAndStation = params => {
+    return axios.get(`${base}/api/Base_Station/GetMaterialsCodeItemsByProcessAndStation`, { params: params });
+};
 export const removeStation = params => {
     return axios.delete(`${base}/api/Base_Station/delete`, { params: params });
 };
@@ -374,13 +403,65 @@ export const editStation = params => {
 export const addStation = params => {
     return axios.post(`${base}/api/Base_Station/post`, params);
 };
+export const updateStationIsFull = params => {
+    return axios.put(`${base}/api/Base_Station/UpdateIsFull`, params);
+};
+export const updateStationIsLock = params => {
+    return axios.put(`${base}/api/Base_Station/UpdateIsLock`, params);
+};
+export const updateStationIsDeleted = params => {
+    return axios.put(`${base}/api/Base_Station/UpdateIsDeleted`, params);
+};
 
 // 配置库存信息方法 
-export const getStockInfoListPage = params => {
-    return axios.post(`${base}/api/Les_StockInfo/get`, params);
+export const getStockInfoCollectListPage = params => {
+    return axios.post(`${base}/api/Les_StockInfo/getcollect`, params);
+};
+export const getStockByArea = params => {
+    return axios.get(`${base}/api/Les_StockInfo/getStockByArea`, { params: params });
+};
+export const getStockForBufferStockVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForBufferStockVisual`, { params: params });
+};
+export const getStockForLVDeMoldVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForLVDeMoldVisual`, { params: params });
+};
+export const getStockForHVDeMoldVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForHVDeMoldVisual`, { params: params });
+};
+export const getStockForLVDeMoldPalletVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForLVDeMoldPalletVisual`, { params: params });
+};
+export const getStockForHVDeMoldPalletVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForHVDeMoldPalletVisual`, { params: params });
+};
+export const getStockForDeMoldLeadVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForDeMoldLeadVisual`, { params: params });
+};
+export const getStockForKCQY_GYNMZBQStockVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForKCQY_GYNMZBQStockVisual`, { params: params });
+};
+export const getStockForKCQY_GYNMTPQStockVisual = params => {
+    return axios.get(`${base}/api/Les_StockInfo/GetStockForKCQY_GYNMTPQStockVisual`, { params: params });
+};
+//获取分组查询立库缓存区的物料列表
+export const getBufferStockCollectGroupMaterialList = params => {
+    return axios.post(`${base}/api/Les_StockInfo/GetBufferStockCollectGroupMaterialList`, params);
 };
 export const removeStockInfo = params => {
     return axios.delete(`${base}/api/Les_StockInfo/delete`, { params: params });
+};
+//删除立库缓存区所有的空托盘和余料信息
+export const deleteAllAllEmptySalverStation = params => {
+    return axios.delete(`${base}/api/Les_StockInfo/DeleteAllAllEmptySalverStation`, { params: params });
+};
+//删除某个区域的全部库存
+export const clearStockByArea = params => {
+    return axios.delete(`${base}/api/Les_StockInfo/ClearStockByArea`, { params: params });
+};
+//根据站点ID删除库存
+export const deleteStockByStationId = params => {
+    return axios.delete(`${base}/api/Les_StockInfo/DeleteStockByStationId`, { params: params });
 };
 export const editStockInfo = params => {
     return axios.put(`${base}/api/Les_StockInfo/put`, params);
@@ -423,42 +504,127 @@ export const addInStockRecord = params => {
     return axios.post(`${base}/api/Les_InStockRecord/post`, params);
 };
 
-// 配置RGV任务方法 
-//分页获取RGV任务列表 
-export const getRgvTaskListPage = params => {
-    return axios.post(`${base}/api/Les_RgvTask/get`, params);
+// 配置AGV任务方法 
+//分页获取AGV任务列表 
+export const getAgvTaskListPage = params => {
+    return axios.post(`${base}/api/Les_AgvTask/get`, params);
 };
-//删除RGV任务 
-export const removeRgvTask = params => {
-    return axios.delete(`${base}/api/Les_RgvTask/delete`, { params: params });
+export const getForNoFinished = params => {
+    return axios.post(`${base}/api/Les_AgvTask/GetForNoFinished`, params);
 };
-//编辑RGV任务 
-export const editRgvTask = params => {
-    return axios.put(`${base}/api/Les_RgvTask/put`, params);
+//根据 AGV任务表的ID 或者是任务号 查找 该任务的详细阶段列表  
+export const getAgvTaskPhaseList = params => {
+    return axios.get(`${base}/api/Les_AgvTask/GetAgvTaskPhaseList`, { params: params });
 };
-//添加RGV任务 
-export const addRgvTask = params => {
-    return axios.post(`${base}/api/Les_RgvTask/post`, params);
+//删除AGV任务 
+export const removeAgvTask = params => {
+    return axios.delete(`${base}/api/Les_AgvTask/delete`, { params: params });
 };
-// 配置RGV异常方法 
-//分页获取RGV异常列表 
-export const getRgvExcepitonListPage = params => {
-    return axios.post(`${base}/api/Les_RgvExcepiton/get`, params);
+//编辑AGV任务 
+export const editAgvTask = params => {
+    return axios.put(`${base}/api/Les_AgvTask/put`, params);
 };
-//删除RGV异常 
-export const removeRgvExcepiton = params => {
-    return axios.delete(`${base}/api/Les_RgvExcepiton/delete`, { params: params });
+//添加AGV任务 
+export const addAgvTask = params => {
+    return axios.post(`${base}/api/Les_AgvTask/post`, params);
 };
-//编辑RGV异常 
-export const editRgvExcepiton = params => {
-    return axios.put(`${base}/api/Les_RgvExcepiton/put`, params);
+
+// 配置AGV异常方法 
+//分页获取AGV异常列表 
+export const getAgvExcepitonListPage = params => {
+    return axios.post(`${base}/api/Les_AgvExcepiton/get`, params);
 };
-//添加RGV异常 
-export const addRgvExcepiton = params => {
-    return axios.post(`${base}/api/Les_RgvExcepiton/post`, params);
+//删除AGV异常 
+export const removeAgvExcepiton = params => {
+    return axios.delete(`${base}/api/Les_AgvExcepiton/delete`, { params: params });
+};
+//编辑AGV异常 
+export const editAgvExcepiton = params => {
+    return axios.put(`${base}/api/Les_AgvExcepiton/put`, params);
+};
+//添加AGV异常 
+export const addAgvExcepiton = params => {
+    return axios.post(`${base}/api/Les_AgvExcepiton/post`, params);
 };
 
 
+// 配置呼叫记录方法 
+//分页获取呼叫记录列表 
+export const getCallRecordListPage = params => {
+    return axios.post(`${base}/api/Les_CallRecord/get`, params);
+};
+//删除呼叫记录 
+export const removeCallRecord = params => {
+    return axios.delete(`${base}/api/Les_CallRecord/delete`, { params: params });
+};
+//编辑呼叫记录 
+export const editCallRecord = params => {
+    return axios.put(`${base}/api/Les_CallRecord/put`, params);
+};
+//添加呼叫记录 
+export const addCallRecord = params => {
+    return axios.post(`${base}/api/Les_CallRecord/post`, params);
+};
+
+// 配置叫料工单方法 
+//分页获取叫料工单列表 
+export const getCallOrderListPage = params => {
+    return axios.post(`${base}/api/Les_CallOrder/get`, params);
+};
+//删除叫料工单 
+export const removeCallOrder = params => {
+    return axios.delete(`${base}/api/Les_CallOrder/delete`, { params: params });
+};
+//编辑叫料工单 
+export const editCallOrder = params => {
+    return axios.put(`${base}/api/Les_CallOrder/put`, params);
+};
+//验证叫料工单 
+export const validateCreateCallOrder = params => {
+    return axios.post(`${base}/api/Les_CallOrder/validateCreateCallOrder`, params);
+};
+//根据 配料工作号 查找 已经分拣完成的，并且指定物料的库存信息 
+export const getBufferStockListByWorkNoForAlert = params => {
+    return axios.post(`${base}/api/Les_CallOrder/GetBufferStockListByWorkNoForAlert`, params);
+};
+//添加叫料工单 
+export const addCallOrder = params => {
+    return axios.post(`${base}/api/Les_CallOrder/post`, params);
+};
+// 配置回库搬运方法 
+//分页获取回库搬运列表 
+export const getBackToStoreListPage = params => {
+    return axios.post(`${base}/api/Les_BackToStore/get`, params);
+};
+//删除回库搬运 
+export const removeBackToStore = params => {
+    return axios.delete(`${base}/api/Les_BackToStore/delete`, { params: params });
+};
+//编辑回库搬运 
+export const editBackToStore = params => {
+    return axios.put(`${base}/api/Les_BackToStore/put`, params);
+};
+//添加回库搬运 
+export const addBackToStore = params => {
+    return axios.post(`${base}/api/Les_BackToStore/post`, params);
+};
+// 配置产线报警方法 
+//分页获取产线报警列表 
+export const getLineWarningListPage = params => {
+    return axios.post(`${base}/api/Wip_LineWarning/get`, params);
+};
+//删除产线报警 
+export const removeLineWarning = params => {
+    return axios.delete(`${base}/api/Wip_LineWarning/delete`, { params: params });
+};
+//编辑产线报警 
+export const editLineWarning = params => {
+    return axios.put(`${base}/api/Wip_LineWarning/put`, params);
+};
+//添加产线报警 
+export const addLineWarning = params => {
+    return axios.post(`${base}/api/Wip_LineWarning/post`, params);
+};
 
 
 // 日志
@@ -487,10 +653,14 @@ export const getActiveUsers = params => {
     return axios.get(`${base}/api/Monitor/GetActiveUsers`, { params: params });
 };
 
+// 信息采集
+export const realTimeDataShow = params => {
+    return axios.get(`${base}/api/wip/RealTimeDataShow`, { params: params });
+};
 
 // Task管理
 export const getTaskListPage = params => {
-    return axios.get(`${base}/api/TasksQz/get`, { params: params });
+    return axios.post(`${base}/api/TasksQz/get`, params);
 };
 export const removeTask = params => {
     return axios.delete(`${base}/api/TasksQz/delete`, { params: params });
@@ -511,8 +681,349 @@ export const stopJob = params => {
 export const reCovery = params => {
     return axios.get(`${base}/api/TasksQz/ReCovery`, { params: params });
 };
+export const executeJob = params => {
+    return axios.get(`${base}/api/TasksQz/ExecuteJob`, { params: params });
+};
+export const pauseJob = params => {
+    return axios.get(`${base}/api/TasksQz/PauseJob`, { params: params });
+};
+export const resumeJob = params => {
+    return axios.get(`${base}/api/TasksQz/ResumeJob`, { params: params });
+};
+export const getTaskNameSpace = params => {
+    return axios.get(`${base}/api/TasksQz/GetTaskNameSpace`, { params: params });
+};
 
 // ids4
 export const getAchieveUsers_IS4 = params => {
     return axios.get(`${base}/is4api/GetAchieveUsers`, { params: params });
 };
+
+// 配置线圈托盘方法 
+//分页获取线圈托盘列表 
+export const getCoilSalverListPage = params => {
+    return axios.post(`${base}/api/Wip_CoilSalver/get`, params);
+};
+//删除线圈托盘 
+export const removeCoilSalver = params => {
+    return axios.delete(`${base}/api/Wip_CoilSalver/delete`, { params: params });
+};
+//编辑线圈托盘 
+export const editCoilSalver = params => {
+    return axios.put(`${base}/api/Wip_CoilSalver/put`, params);
+};
+//添加线圈托盘 
+export const addCoilSalver = params => {
+    return axios.post(`${base}/api/Wip_CoilSalver/post`, params);
+};
+// 配置请求备料表方法 
+//分页获取请求备料表列表 
+export const getPrepareMatsListPage = params => {
+    return axios.post(`${base}/api/Les_PrepareMats/get`, params);
+};
+//删除请求备料表 
+export const removePrepareMats = params => {
+    return axios.delete(`${base}/api/Les_PrepareMats/delete`, { params: params });
+};
+//编辑请求备料表 
+export const editPrepareMats = params => {
+    return axios.put(`${base}/api/Les_PrepareMats/put`, params);
+};
+//添加请求备料表 
+export const addPrepareMats = params => {
+    return axios.post(`${base}/api/Les_PrepareMats/post`, params);
+};
+//获取空库位列表
+export const getEmptyStationList = params => {
+    return axios.get(`${base}/api/Base_Station/GetEmptyStationList`, { params: params });
+};
+//用于下拉列表，展示所有的库位，并显示状态
+export const getAllStationList = params => {
+    return axios.get(`${base}/api/Base_Station/GetAllStationList`, { params: params });
+};
+//根据工序获取工序下的站点列表（显示全部）
+export const getStationsByProcedure = params => {
+    return axios.get(`${base}/api/Base_Station/GetStationsByProcedure`, { params: params });
+};
+//根据用户的工序权限，获取他下面的工序获取工序下的站点列表（显示全部）
+export const getAllStationsByUserProcedure = params => {
+    return axios.get(`${base}/api/Base_Station/getAllStationsByUserProcedure`, { params: params });
+};
+// 配置人工处理数据记录表方法 
+//分页获取人工处理数据记录表列表 
+export const getPersonHandlerRecordListPage = params => {
+    return axios.post(`${base}/api/Les_PersonHandlerRecord/get`, params);
+};
+//删除人工处理数据记录表 
+export const removePersonHandlerRecord = params => {
+    return axios.delete(`${base}/api/Les_PersonHandlerRecord/delete`, { params: params });
+};
+//编辑人工处理数据记录表 
+export const editPersonHandlerRecord = params => {
+    return axios.put(`${base}/api/Les_PersonHandlerRecord/put`, params);
+};
+//添加人工处理数据记录表 
+export const addPersonHandlerRecord = params => {
+    return axios.post(`${base}/api/Les_PersonHandlerRecord/post`, params);
+};
+
+//获取大类物料，按照分级结构
+export const getBigMaterialsForCascader = params => {
+    return axios.get(`${base}/api/LESPublic/GetBigMaterialsForCascader`, { params: params });
+};
+//获取站点，按照 工序的 分级结构
+export const getStaionsByProcedureForCascader = params => {
+    return axios.get(`${base}/api/LESPublic/GetStaionsByProcedureForCascader`, { params: params });
+};
+
+// 配置分拣入库任务方法 
+//分页获取分拣入库任务列表 
+export const getPickInStockTaskListPage = params => {
+    return axios.post(`${base}/api/Les_PickInStockTask/get`, params);
+};
+//删除分拣入库任务 
+export const removePickInStockTask = params => {
+    return axios.delete(`${base}/api/Les_PickInStockTask/delete`, { params: params });
+};
+//编辑分拣入库任务 
+export const editPickInStockTask = params => {
+    return axios.put(`${base}/api/Les_PickInStockTask/put`, params);
+};
+//添加分拣入库任务 
+export const addPickInStockTask = params => {
+    return axios.post(`${base}/api/Les_PickInStockTask/post`, params);
+};
+//更新分拣入库任务是否分拣完成 
+export const updateIsPickFinish = params => {
+    return axios.put(`${base}/api/Les_PickInStockTask/UpdateIsPickFinish`, params);
+};
+// 配置角色工序查询视图方法 
+//分页获取角色工序查询视图列表 
+export const getProcedureRoleListPage = params => {
+    return axios.post(`${base}/api/V_ProcedureRole/get`, params);
+};
+//删除角色工序查询视图 
+export const removeProcedureRole = params => {
+    return axios.delete(`${base}/api/V_ProcedureRole/delete`, { params: params });
+};
+//编辑角色工序查询视图 
+export const editProcedureRole = params => {
+    return axios.put(`${base}/api/V_ProcedureRole/put`, params);
+};
+//添加角色工序查询视图 
+export const addProcedureRole = params => {
+    return axios.post(`${base}/api/V_ProcedureRole/post`, params);
+};
+//根据 LES任务表的ID 查找 该任务的详细阶段列表  
+export const getTaskPhaseList = params => {
+    return axios.get(`${base}/api/Les_TaskPhase/Get`, { params: params });
+};
+//根据 LES任务号 查找 该任务的详细阶段列表  
+export const getTaskPhaseListByLesTaskNo = params => {
+    return axios.get(`${base}/api/Les_TaskPhase/GetTaskPhaseListByLesTaskNo`, { params: params });
+};
+// 配置Agv车辆方法 
+//获取全部车辆
+export const getAllVehicles = params => {
+    return axios.get(`${base}/api/Les_Agv/GetAllVehicles`, { params: params });
+};
+//分页获取Agv车辆列表 
+export const getAgvListPage = params => {
+    return axios.post(`${base}/api/Les_Agv/get`, params);
+};
+//删除Agv车辆 
+export const removeAgv = params => {
+    return axios.delete(`${base}/api/Les_Agv/delete`, { params: params });
+};
+//编辑Agv车辆 
+export const editAgv = params => {
+    return axios.put(`${base}/api/Les_Agv/put`, params);
+};
+//添加Agv车辆 
+export const addAgv = params => {
+    return axios.post(`${base}/api/Les_Agv/post`, params);
+};
+// 配置用户站点绑定方法 
+//分页获取用户站点绑定列表 
+export const getUserStationListPage = params => {
+    return axios.post(`${base}/api/V_UserStation/get`, params);
+};
+//删除用户站点绑定 
+export const removeUserStation = params => {
+    return axios.delete(`${base}/api/V_UserStation/delete`, { params: params });
+};
+//编辑用户站点绑定 
+export const editUserStation = params => {
+    return axios.put(`${base}/api/V_UserStation/put`, params);
+};
+//添加用户站点绑定 
+export const addUserStation = params => {
+    return axios.post(`${base}/api/V_UserStation/post`, params);
+};
+
+//取消AGV任务 
+export const cancelAgvTask = params => {
+    return axios.post(`${base}/api/LESPublic/CancelAgvTask`, params);
+};
+//强制完成AGV任务 
+export const coerceFinishAgvTask = params => {
+    return axios.post(`${base}/api/LESPublic/CoerceFinishAgvTask`, params);
+};
+// 配置AGV报警方法 
+//分页获取AGV报警列表 
+export const getAgvWarningListPage = params => {
+    return axios.post(`${base}/api/Les_AgvWarning/get`, params);
+};
+//删除AGV报警 
+export const removeAgvWarning = params => {
+    return axios.delete(`${base}/api/Les_AgvWarning/delete`, { params: params });
+};
+//编辑AGV报警 
+export const editAgvWarning = params => {
+    return axios.put(`${base}/api/Les_AgvWarning/put`, params);
+};
+//添加AGV报警 
+export const addAgvWarning = params => {
+    return axios.post(`${base}/api/Les_AgvWarning/post`, params);
+};
+//更新全部报警为已处理 
+export const updateAllWarningDone = params => {
+    return axios.post(`${base}/api/Les_AgvWarning/UpdateAllWarningDone`, params);
+};
+//报警信息知道了 
+export const updateWarningKnow = params => {
+    return axios.post(`${base}/api/Les_AgvWarning/UpdateWarningKnow`, params);
+};
+//获取 最新的AGV报警 
+export const getLastOneAgvWarning = params => {
+    return axios.get(`${base}/api/Les_AgvWarning/GetLastOneAgvWarning`, { params: params });
+};
+// 配置高压绕线线圈任务方法 
+//分页获取高压绕线线圈任务列表 
+export const getHighPressureProductsTaskListPage = params => {
+    return axios.post(`${base}/api/Les_HighPressureProductsTask/get`, params);
+};
+//删除高压绕线线圈任务 
+export const removeHighPressureProductsTask = params => {
+    return axios.delete(`${base}/api/Les_HighPressureProductsTask/delete`, { params: params });
+};
+//编辑高压绕线线圈任务 
+export const editHighPressureProductsTask = params => {
+    return axios.put(`${base}/api/Les_HighPressureProductsTask/put`, params);
+};
+//添加高压绕线线圈任务 
+export const addHighPressureProductsTask = params => {
+    return axios.post(`${base}/api/Les_HighPressureProductsTask/post`, params);
+};
+// 配置出入库记录方法 
+//分页获取出入库记录列表 
+export const getInOutStockRecordListPage = params => {
+    return axios.post(`${base}/api/Les_InOutStockRecord/get`, params);
+};
+//删除出入库记录 
+export const removeInOutStockRecord = params => {
+    return axios.delete(`${base}/api/Les_InOutStockRecord/delete`, { params: params });
+};
+//编辑出入库记录 
+export const editInOutStockRecord = params => {
+    return axios.put(`${base}/api/Les_InOutStockRecord/put`, params);
+};
+//添加出入库记录 
+export const addInOutStockRecord = params => {
+    return axios.post(`${base}/api/Les_InOutStockRecord/post`, params);
+};
+
+//获取首页数据  
+export const getWelcomeData = params => {
+    return axios.get(`${base}/api/LESPublic/GetWelcomeData`, { params: params });
+};
+export const getWelcomeDataForPie = params => {
+    return axios.get(`${base}/api/LESPublic/GetWelcomeDataForPie`, { params: params });
+};
+export const productYieldByTimeRange = params => {
+    return axios.get(`${base}/api/LESPublic/ProductYieldByTimeRange`, { params: params });
+};
+export const getAgvForUseRatioPie = params => {
+    return axios.get(`${base}/api/LESPublic/GetAgvForUseRatioPie`, { params: params });
+};
+//增加库存 
+export const addStoreByStation = params => {
+    return axios.post(`${base}/api/LESPublic/AddStoreByStation`, params);
+};
+
+// 配置异常日志表方法 
+//分页获取异常日志表列表 
+export const getSysExceptionInfoListPage = params => {
+    return axios.post(`${base}/api/Base_SysExceptionInfo/get`, params);
+};
+//删除异常日志表 
+export const removeSysExceptionInfo = params => {
+    return axios.delete(`${base}/api/Base_SysExceptionInfo/delete`, { params: params });
+};
+//编辑异常日志表 
+export const editSysExceptionInfo = params => {
+    return axios.put(`${base}/api/Base_SysExceptionInfo/put`, params);
+};
+//添加异常日志表 
+export const addSysExceptionInfo = params => {
+    return axios.post(`${base}/api/Base_SysExceptionInfo/post`, params);
+};
+
+// 配置请求日志表方法 
+//分页获取请求日志表列表 
+export const getHttpRequestRecordListPage = params => {
+    return axios.post(`${base}/api/HttpRequestRecord/get`, params);
+};
+//删除请求日志表 
+export const removeHttpRequestRecord = params => {
+    return axios.delete(`${base}/api/HttpRequestRecord/delete`, { params: params });
+};
+//编辑请求日志表 
+export const editHttpRequestRecord = params => {
+    return axios.put(`${base}/api/HttpRequestRecord/put`, params);
+};
+//添加请求日志表 
+export const addHttpRequestRecord = params => {
+    return axios.post(`${base}/api/HttpRequestRecord/post`, params);
+};
+
+// 配置Agv车辆状态历史记录方法 
+//分页获取Agv车辆状态历史记录列表 
+export const getAgvStatusHistoryListPage = params => {
+    return axios.post(`${base}/api/Les_AgvStatusHistory/get`, params);
+};
+//删除Agv车辆状态历史记录 
+export const removeAgvStatusHistory = params => {
+    return axios.delete(`${base}/api/Les_AgvStatusHistory/delete`, { params: params });
+};
+//编辑Agv车辆状态历史记录 
+export const editAgvStatusHistory = params => {
+    return axios.put(`${base}/api/Les_AgvStatusHistory/put`, params);
+};
+//添加Agv车辆状态历史记录 
+export const addAgvStatusHistory = params => {
+    return axios.post(`${base}/api/Les_AgvStatusHistory/post`, params);
+};
+// 配置Thingworx呼叫任务方法 
+//分页获取Thingworx呼叫任务列表 
+export const getThingworx_CallOrderListPage = params => {
+    return axios.post(`${base}/api/Thingworx_CallOrder/get`, params);
+};
+
+// 配置Thingworx 备料通知表方法 
+//分页获取Thingworx 备料通知表列表 
+export const getStockPreparationNoticeListPage = params => {
+    return axios.post(`${base}/api/Thingworx_StockPreparationNotice/get`, params);
+};
+//删除Thingworx 备料通知表 
+export const removeStockPreparationNotice = params => {
+    return axios.delete(`${base}/api/Thingworx_StockPreparationNotice/delete`, { params: params });
+};
+//编辑Thingworx 备料通知表 
+export const editStockPreparationNotice = params => {
+    return axios.put(`${base}/api/Thingworx_StockPreparationNotice/put`, params);
+};
+//添加Thingworx 备料通知表 
+export const addStockPreparationNotice = params => {
+    return axios.post(`${base}/api/Thingworx_StockPreparationNotice/post`, params);
+}; 

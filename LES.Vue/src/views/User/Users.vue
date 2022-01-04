@@ -175,10 +175,12 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="editFormVisible = false">取消</el-button>
+        <el-button @click.native="editFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="editSubmit"
-                   :loading="editLoading">提交</el-button>
+                   :loading="editLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
 
@@ -236,18 +238,19 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="addFormVisible = false">取消</el-button>
+        <el-button @click.native="addFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="addSubmit"
-                   :loading="addLoading">提交</el-button>
+                   :loading="addLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
     <!-- 导出组件 -->
     <ToolbarExport ref="cmToolbarExport"
                    :exportFileName="exportFileName"
-                   :filterVal="filterVal"
                    :currentPageData="currentPageData"
-                   :tHeader="tHeader" />
+                   :exportColumnHeader="exportColumnHeader" />
   </section>
 </template>
 
@@ -258,7 +261,7 @@ import { getButtonList } from "../../promissionRouter";
 import Toolbar from "../../components/ToolbarButton";
 import searchForm from "../../components/SearchForm";
 import ToolbarExport from "../../components/ToolbarExport";
-import { isShowOperatorButtonCommon, isNeedShowOperatorColumn } from '../../../util/common'
+import { isShowOperatorButtonCommon, isNeedShowOperatorColumn, isMobile } from '../../../util/common'
 
 
 export default {
@@ -268,8 +271,7 @@ export default {
       //导出组件相关
       exportFileName: '用户信息',//要导出的文件名
       currentPageData: [],//当前页面的列表数据
-      tHeader: [],//当前页面列表的表头汉字数组，导出用
-      filterVal: [],//当前页面列表的表头属性数组，导出用
+      exportColumnHeader: { 'uRealName': '昵称', 'uLoginName': '登录名', 'RoleNames': '角色' },//当前页面列表的表头汉字和属性数组，导出用 
 
       //搜索框相关
       commonSearchOptionSet: "模糊",//通用查询的默认配置,"模糊"或"精准" 
@@ -277,10 +279,10 @@ export default {
         width: '300px',
       },
       controlStyle: {//设置搜索控件的长度等样式
-        width: '300px',
+        width: '350px',
       },
       labelWidth: "90px",//显示Label的宽度
-      drawerSize: "550px",//drawner宽度设置
+      drawerSize: "600px",//drawner宽度设置
       searchFormInputPlaceholder: '请输入昵称/登录名',//要给子搜索组件传递的值
       searchFormInputAttrs: ["uRealName", "uLoginName"],
       formOptions: [
@@ -418,7 +420,7 @@ export default {
       para.pageSize = this.pageSize
       if (flag === '2') { // 全部导出
         para.page = 1
-        para.pageSize = 10000
+        para.pageSize = 100000
       }
       return para
     },
@@ -459,7 +461,7 @@ export default {
 
         return;
       }
-      this.$confirm('确认删除该记录吗?', '提示', {
+      this.$confirm('确认要删除用户 "' + row.uRealName + '" 吗？', '提示', {
         type: 'warning'
       }).then(() => {
         this.listLoading = true;
@@ -557,6 +559,7 @@ export default {
                 this.editFormVisible = false;
                 this.getUsers();
               } else {
+                this.editLoading = false;
                 this.$message({
                   message: res.data.msg,
                   type: 'error'
@@ -596,13 +599,13 @@ export default {
                 this.getUsers();
               }
               else {
+                this.addLoading = false;
                 this.$message({
                   message: res.data.msg,
                   type: 'error'
                 });
 
               }
-
             });
 
           });
@@ -618,7 +621,7 @@ export default {
       // return;
 
       var ids = this.sels.map(item => item.uID).toString();
-      this.$confirm('确认删除选中记录吗？', '提示', {
+      this.$confirm('确认要删除用户 "' + item.Name + '" 吗？', '提示', {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
@@ -642,9 +645,6 @@ export default {
     },
     //导出
     handleExport () {
-      this.tHeader = ['昵称', '登录名'] // 表头
-      this.filterVal = ['uRealName', 'uLoginName'] // 字段
-
       this.currentPageData = this.users
       this.$refs.cmToolbarExport.showPrintPage()
     },

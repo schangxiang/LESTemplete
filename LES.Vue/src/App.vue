@@ -12,9 +12,11 @@
                   :class="collapsed?'logo-collapse-width':'logo-width'">
             <div @click="toindex"
                  v-if="collapsed?true:false"> {{collapsed?sysNameShort:sysName}}</div>
+            <!--
             <img src="./assets/page_logo.png"
                  v-if="collapsed?false:true"
-                 style="width:200px;height: 90px; margin-left:3px;" />
+                 style="width:200px;height: 90px; margin-left:3px;" />-->
+            <p style="width:200px;height: 90px; margin-left:3px;margin-top: 8px;">{{leftSysName}}</p>
           </el-col>
           <el-col :span="10"
                   class="logoban">
@@ -127,6 +129,8 @@
                   </el-button>
                   <el-dropdown-menu size="small"
                                     slot="dropdown">
+                    <el-dropdown-item command="left">关闭左侧</el-dropdown-item>
+                    <el-dropdown-item command="right">关闭右侧</el-dropdown-item>
                     <el-dropdown-item command="other">关闭其他</el-dropdown-item>
                     <el-dropdown-item command="all">关闭所有</el-dropdown-item>
                   </el-dropdown-menu>
@@ -183,12 +187,53 @@
          tabindex="0"
          style="z-index: 2917;"></div>
 
+    <!--报警界面展示-->
+    <el-dialog title="有最新的报警！！！"
+               :visible.sync="warningFormVisible"
+               :close-on-click-modal="false">
+      <el-form :model="warningForm"
+               size="small"
+               label-width="80px"
+               ref="warningForm">
+        <el-form-item label="报警时间"
+                      prop="WarningTime"
+                      :rules="[{ required: true, message: '报警时间不能为空'}]">
+          <el-date-picker type="datetime"
+                          disabled="true"
+                          placeholder="选择日期时间"
+                          v-model="warningForm.WarningTime"></el-date-picker>
+        </el-form-item>
+        <el-form-item label="车辆"
+                      prop="AgvNameDesc">
+          <el-input disabled="true"
+                    v-model="warningForm.AgvNameDesc"></el-input>
+        </el-form-item>
+        <el-form-item label="报警内容"
+                      prop="WarningContent"
+                      :rules="[{ required: true, message: '报警内容不能为空'}]">
+          <el-input disabled="true"
+                    v-model="warningForm.WarningContent"></el-input>
+        </el-form-item>
+        <el-form-item label="报警位置"
+                      prop="WarningLocation">
+          <el-input disabled="true"
+                    v-model="warningForm.WarningLocation"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer"
+           class="dialog-footer">
+        <el-button @click.native="iKnowForwarning">标记已读</el-button>
+        <el-button type="primary"
+                   style="display:none;"
+                   @click.native="goToWarning">去处理</el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 <script>
 import Sidebar from './components/Sidebar'
 import ScrollPane from './components/ScrollPane'
-import { getUserByToken } from './api/api';
+import { getLastOneAgvWarning, updateWarningKnow, getUserByToken } from './api/api';
 
 import applicationUserManager from "./Auth/applicationusermanager";
 import userAuth from "./Auth/UserAuth";
@@ -198,8 +243,9 @@ export default {
   mixins: [userAuth],
   data () {
     return {
-      sysName: '西门子LES',
-      sysNameShort: 'LES',
+      sysName: this.GLOBAL.sysName,
+      sysNameShort: this.GLOBAL.sysNameShort,
+      leftSysName: this.GLOBAL.leftSysName,
       NewsVisible: false,
       SidebarVisible: false,
       collapsed: false,//默认左侧菜单栏展开 [EditBy shaocx,2021-01-16]
@@ -237,11 +283,64 @@ export default {
       top: 0,
       left: 0,
       selectedTag: {},
-      affixTags: []
+      affixTags: [],
 
+      //报警相关
+      warningObjList: [],//报警列表
+      warningFormVisible: false,
+      warningForm: {},
+      //定时相关
+      timingValue: 5, // 定时频率
+      isTimingData: true, // 是否定时获取
+      timer: '', // 定时刷新
     }
   },
   methods: {
+    //获取 报警信息
+    getLastOneAgvWarning () {
+      getLastOneAgvWarning({}).then((res) => {
+        this.warningForm = res.data.response;
+        if (this.warningForm == null) {
+          this.warningFormVisible = false;
+          this.warningForm = {}
+        }
+        else {
+          this.warningFormVisible = true;
+        }
+      });
+    },
+    // 定时刷新
+    createdTimer () {
+      this.timer = setInterval(this.getLastOneAgvWarning, this.timingValue * 1000)
+    },
+    //前往处理报警
+    goToWarning () {
+      this.$router.replace({
+        path: "/AGV/AgvWarning",
+        query: {
+          warningId: this.warningForm.Id
+        }
+      })
+    },
+    //将报警标记为‘我知道了’
+    iKnowForwarning () {
+      let para = { Id: this.warningForm.Id };
+      updateWarningKnow(para).then((res) => {
+        if (res.data.success) {
+          this.$message({
+            message: '标记成功！',
+            type: 'success'
+          });
+          this.warningFormVisible = false;
+        }
+        else {
+          this.$message({
+            message: res.data.msg,
+            type: 'error'
+          });
+        }
+      });
+    },
     gotappath (Path) {
       console.log(Path);
       this.$router.replace({
@@ -381,6 +480,30 @@ export default {
 
       sessionStorage.setItem("Tags", JSON.stringify(this.tagsList))
     },
+    // 关闭左侧标签
+    closeLeft () {
+      let index = this.tagsList.findIndex(item => item.path == this.$route.fullPath);
+      var newArr = [];
+      for (var i = index; i < this.tagsList.length; i++) {
+        newArr.push(this.tagsList[i]);
+      }
+      this.tagsList = newArr;
+
+
+      sessionStorage.setItem("Tags", JSON.stringify(this.tagsList))
+    },
+    // 关闭右侧标签
+    closeRight () {
+      let index = this.tagsList.findIndex(item => item.path == this.$route.fullPath);
+      var newArr = [];
+      for (var i = 0; i < (index + 1); i++) {
+        newArr.push(this.tagsList[i]);
+      }
+      this.tagsList = newArr;
+
+
+      sessionStorage.setItem("Tags", JSON.stringify(this.tagsList))
+    },
     // 设置标签
     setTags (route) {
       if (!route.meta.NoTabPage) {
@@ -396,7 +519,15 @@ export default {
     },
     // 当关闭所有页面时隐藏
     handleTags (command) {
-      command === 'other' ? this.closeOther() : this.closeAll();
+      if (command === 'other') {
+        this.closeOther();
+      } else if (command === 'left') {
+        this.closeLeft();
+      } else if (command === 'right') {
+        this.closeRight();
+      } else {
+        this.closeAll();
+      }
     },
     getUserInfoByToken (token) {
       var _this = this;
@@ -428,7 +559,16 @@ export default {
       });
     },
   },
+  beforeDestroy () {
+    //window.clearInterval(this.t)
+    this.connection.stop();
+    if (this.timer) { // 如果定时器还在运行 或者直接关闭，不用判断
+      clearInterval(this.timer)
+    }
+  },
   mounted () {
+
+    this.createdTimer();
     console.log(this.$route)
 
     var tags = sessionStorage.getItem('Tags') ? JSON.parse(sessionStorage.getItem('Tags')) : [];
@@ -511,6 +651,7 @@ export default {
 
     if (this.ispc) {
       this.collapsedClass = 'menu-expanded';
+      this.collapse();
     } else {
       this.collapsedClass = 'menu-expanded-mobile mobile-ex';
       this.collapsed = true;

@@ -114,6 +114,11 @@ export default {
       type: Object,
       required: true,
     },
+    /*是否要隐藏 条件运算符 */
+    hideCommonFilter: {
+      type: Object,
+      required: true,
+    },
     value: {},
     valueMode: '',
     itemOptions: {
@@ -174,7 +179,13 @@ export default {
     },
     // 是否显示通用的过滤模式
     isShowCommonFitler () {
-      return this.itemOptions.element != 'el-date-picker'
+      if (this.itemOptions.element === 'el-date-picker') {
+        return false;
+      }
+      if (this.hideCommonFilter == undefined || this.hideCommonFilter == "undefined") {
+        return true;
+      }
+      return false;
     },
     // el-input-number
     isInputNumber () {
@@ -217,8 +228,7 @@ export default {
       this.currentValMode2 = ''
     },
     getValues () {
-      if (this.itemOptions.element === 'el-input'
-        || this.itemOptions.element === 'el-select') {
+      if (this.itemOptions.element === 'el-input') {
         return [
           {
             value: '1',
@@ -232,11 +242,34 @@ export default {
           //*/
           {
             value: '2',
-            label: '='
+            label: '等于'
           },
           {
             value: '8',
-            label: '<>'
+            label: '不等于'
+          }
+        ]
+      }
+      else if (
+        this.itemOptions.element === 'el-select') {
+        return [
+          /*
+          {
+            value: '1',
+            label: '模糊'
+          },
+          {
+            value: '3',
+            label: '空值'
+          },
+          //*/
+          {
+            value: '2',
+            label: '等于'
+          },
+          {
+            value: '8',
+            label: '不等于'
           }
         ]
       }
@@ -253,28 +286,28 @@ export default {
         //*/
         {
           value: '2',
-          label: '='
+          label: '等于'
         },
         {
           value: '4',
-          label: '>='
+          label: '大于等于'
         },
         {
           value: '5',
-          label: '<='
+          label: '小于等于'
         },
         {
           value: '6',
-          label: '>'
+          label: '大于'
         },
 
         {
           value: '7',
-          label: '<'
+          label: '小于'
         },
         {
           value: '8',
-          label: '<>'
+          label: '不等于'
         }
       ]
 

@@ -127,10 +127,12 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="editFormVisible = false">取消</el-button>
+        <el-button @click.native="editFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="editSubmit"
-                   :loading="editLoading">提交</el-button>
+                   :loading="editLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
 
@@ -168,10 +170,12 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="addFormVisible = false">取消</el-button>
+        <el-button @click.native="addFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="addSubmit"
-                   :loading="addLoading">提交</el-button>
+                   :loading="addLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
   </section>
@@ -194,8 +198,7 @@ export default {
       //导出组件相关 
       exportFileName: '角色管理信息',//要导出的文件名 
       currentPageData: [],//当前页面的列表数据 
-      tHeader: ['接口地址', '描述'],//当前页面列表的表头汉字数组，导出用 
-      filterVal: ['LinkUrl', 'Name'],//当前页面列表的表头属性数组，导出用 
+      exportColumnHeader: { 'LinkUrl': '接口地址', 'Name': '描述' },//当前页面列表的表头汉字和属性数组，导出用 
 
       //搜索框相关 
       ChildSearchForm: {},
@@ -204,10 +207,10 @@ export default {
         width: '300px',
       },
       controlStyle: {//设置搜索控件的长度等样式 
-        width: '200px',
+        width: '350px',
       },
       labelWidth: "90px",//显示Label的宽度 
-      drawerSize: "450px",//drawner宽度设置 
+      drawerSize: "600px",//drawner宽度设置 
       searchFormInputPlaceholder: '请输入接口地址/描述',//要给子搜索组件传递的值
       searchFormInputAttrs: ['LinkUrl', 'Name'],//要给子搜索组件传递的属性名
       formOptions: [
@@ -316,7 +319,7 @@ export default {
       para.pageSize = this.pageSize
       if (flag === '2') { // 全部导出 
         para.page = 1
-        para.pageSize = 10000
+        para.pageSize = 100000
       }
       return para
     },

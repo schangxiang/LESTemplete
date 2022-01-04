@@ -1,3 +1,9 @@
+
+const path = require("path");
+function resolve (dir) {
+  return path.join(__dirname, '.', dir)
+}
+const _global = require("./src/components/Global/Global.js")
 module.exports = {
   // 基本路径
   baseUrl: "/",
@@ -7,8 +13,27 @@ module.exports = {
   lintOnSave: true,
   // webpack配置
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
-  chainWebpack: () => {},
-  configureWebpack: () => {},
+  //chainWebpack: () => { },
+  //配置SVG
+  chainWebpack: config => {
+    config.module
+      .rule('svg')
+      .exclude.add(resolve('src/icons/svg'))
+      .end();
+    config.module
+      .rule('icons')
+      .test(/\.svg$/)
+      .include.add(resolve('src/icons/svg'))
+      .end()
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({
+        symbolId: 'icon-[name]',
+      })
+      .end();
+  },
+  //*/
+  configureWebpack: () => { },
   // 生产环境是否生成 sourceMap 文件
   productionSourceMap: true,
   // css相关配置
@@ -32,7 +57,7 @@ module.exports = {
   devServer: {
     open: true, //配置自动启动浏览器
     host: "127.0.0.1",
-    port: 2364, // 当前vue项目 端口号
+    port: _global.systemPort, // 当前vue项目 端口号
     https: false,
     hotOnly: false, // https:{type:Boolean}
     // proxy: null, // 设置代理
@@ -40,7 +65,8 @@ module.exports = {
     proxy: {
       // 配置多个代理
       "/api": {
-        target: "http://localhost:8081",//这里改成你自己的后端api端口地址，记得每次修改，都需要重新build
+        target: "http://localhost:8082",//测试环境，这里改成你自己的后端api端口地址，记得每次修改，都需要重新build
+        //target: "http://192.168.80.101:8082",//生产环境，这里改成你自己的后端api端口地址，记得每次修改，都需要重新build
         //target: "http://localhost:58427",
         //target: "http://api.douban.com",
         ws: true,
@@ -51,7 +77,7 @@ module.exports = {
         }
       },
       "/images": {
-        target: "http://localhost:8081",
+        target: "http://localhost:8082",
         ws: true,
         changeOrigin: true
       },
@@ -61,7 +87,7 @@ module.exports = {
         changeOrigin: true
       },
     },
-    before: app => {}
+    before: app => { }
   },
   // 第三方插件配置
   pluginOptions: {

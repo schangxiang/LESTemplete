@@ -112,11 +112,24 @@ export const pickerOptionsRangeMonth = {
   ]
 }
 
+/**
+ * 判断字符串是否是日期类型
+ * @param {} data 
+ * @returns 
+ */
+export function IsDateStr (data) {
+  if (isNaN(data) && !isNaN(Date.parse(data))) {
+    //console.log("data是日期格式！")
+    return true
+  }
+  return false
+}
+
 // 导出文件使用的日期格式
 export function getNowFormatDateForExport () {
   var date = new Date()
   var seperator1 = '-'
-  var seperator2 = ':'
+  var seperator2 = '_'
   var month = date.getMonth() + 1
   var strDate = date.getDate()
   if (month >= 1 && month <= 9) {
@@ -125,9 +138,9 @@ export function getNowFormatDateForExport () {
   if (strDate >= 0 && strDate <= 9) {
     strDate = '0' + strDate
   }
-  var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate +
-    ' ' + date.getHours() + seperator2 + date.getMinutes() +
-    seperator2 + date.getSeconds()
+  var currentdate = // date.getFullYear() + seperator1 +
+    month + seperator1 + strDate +
+    ' ' + date.getHours() + seperator2 + date.getMinutes()
   return currentdate
 }
 

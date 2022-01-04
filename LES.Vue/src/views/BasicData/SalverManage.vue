@@ -145,18 +145,19 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="addFormVisible = false">取消</el-button>
+        <el-button @click.native="addFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="SaveData"
-                   :loading="addLoading">提交</el-button>
+                   :loading="addLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
     <!-- 导出组件 -->
     <ToolbarExport ref="cmToolbarExport"
                    :exportFileName="exportFileName"
-                   :filterVal="filterVal"
                    :currentPageData="currentPageData"
-                   :tHeader="tHeader" />
+                   :exportColumnHeader="exportColumnHeader" />
   </section>
 </template> 
  
@@ -168,7 +169,7 @@ import Toolbar from "../../components/ToolbarButton";
 import SearchForm from "../../components/SearchForm";
 import ToolbarExport from "../../components/ToolbarExport";
 import { formatDate } from '../../../util/tools'
-import { isShowOperatorButtonCommon, isNeedShowOperatorColumn } from '../../../util/common'
+import { isShowOperatorButtonCommon, isNeedShowOperatorColumn, isMobile } from '../../../util/common'
 
 
 export default {
@@ -178,9 +179,10 @@ export default {
       //导出组件相关 
       exportFileName: '$ChinaComment$信息',//要导出的文件名 
       currentPageData: [],//当前页面的列表数据 
-      tHeader: ['托盘编号', '托盘类型', '所属产线', '创建者ID', '创建者', '修改ID', '修改者', '修改时间'],//当前页面列表的表头汉字数组，导出用 
-      filterVal: ['SalverCode', 'SalverType', 'AllowLine', 'CreateId', 'CreateBy', 'ModifyId', 'ModifyBy', 'ModifyTime'],//当前页面列表的表头属性数组，导出用 
-
+      exportColumnHeader: {
+        'SalverCode': '托盘编号', 'SalverType': '托盘类型', 'AllowLine': '所属产线',
+        'CreateBy': '创建者', 'ModifyBy': '修改者', 'ModifyTime': '修改时间'
+      },//当前页面列表的表头汉字和属性数组，导出用 
       //搜索框相关 
       commonSearchOptionSet: "精准",//通用查询的默认配置,"模糊"或"精准"
       searchValControlStyle: {//设置通用搜索框的长度等样式 
@@ -323,7 +325,7 @@ export default {
       para.pageSize = this.pageSize
       if (flag === '2') { // 全部导出 
         para.page = 1
-        para.pageSize = 10000
+        para.pageSize = 100000
       }
       return para
     },

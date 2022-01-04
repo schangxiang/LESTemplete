@@ -11,6 +11,7 @@
         </toolbar>
         <!-- 搜索 -->
         <SearchForm :formOptions="formOptions"
+                    :commonSearchOptionSet="commonSearchOptionSet"
                     :drawerSize="drawerSize"
                     :labelWidth="labelWidth"
                     :controlStyle="controlStyle"
@@ -18,7 +19,7 @@
                     :searchFormInputPlaceholder="searchFormInputPlaceholder"
                     :searchFormInputAttrs="searchFormInputAttrs"
                     ref="ChildSearchForm"
-                    @onSearch="getCodeSets" />
+                    @onSearch="_getCodeSets" />
       </el-form>
     </el-col>
 
@@ -36,6 +37,10 @@
                        label="#"
                        align="center"
                        width="50">
+      </el-table-column>
+      <el-table-column prop="Id"
+                       label="ID"
+                       align="center">
       </el-table-column>
       <el-table-column prop="code"
                        label="代码编码"
@@ -144,18 +149,19 @@
       </el-form>
       <div slot="footer"
            class="dialog-footer">
-        <el-button @click.native="addFormVisible = false">取消</el-button>
+        <el-button @click.native="addFormVisible = false"
+                   icon="fa fa-power-off">取消</el-button>
         <el-button type="primary"
                    @click.native="SaveData"
-                   :loading="addLoading">提交</el-button>
+                   :loading="addLoading"
+                   icon="fa fa-send">提交</el-button>
       </div>
     </el-dialog>
     <!-- 导出组件 -->
     <ToolbarExport ref="cmToolbarExport"
                    :exportFileName="exportFileName"
-                   :filterVal="filterVal"
                    :currentPageData="currentPageData"
-                   :tHeader="tHeader" />
+                   :exportColumnHeader="exportColumnHeader" />
   </section>
 </template>
 
@@ -167,7 +173,7 @@ import Toolbar from "../../components/ToolbarButton";
 import SearchForm from "../../components/SearchForm";
 import ToolbarExport from "../../components/ToolbarExport";
 import { formatDate } from '../../../util/tools'
-import { isShowOperatorButtonCommon, isNeedShowOperatorColumn } from '../../../util/common'
+import { isShowOperatorButtonCommon, isNeedShowOperatorColumn, isMobile } from '../../../util/common'
 
 
 export default {
@@ -177,18 +183,18 @@ export default {
       //导出组件相关
       exportFileName: '码表集信息',//要导出的文件名
       currentPageData: [],//当前页面的列表数据
-      tHeader: ['代码编码', '代码名称', '说明'],//当前页面列表的表头汉字数组，导出用
-      filterVal: ['code', 'name', 'note'],//当前页面列表的表头属性数组，导出用
+      exportColumnHeader: { 'code': '代码编码', 'name': '代码名称', 'note': '说明' },//当前页面列表的表头汉字和属性数组，导出用 
 
       //搜索框相关
+      commonSearchOptionSet: "模糊",//通用查询的默认配置,"模糊"或"精准" 
       searchValControlStyle: {//设置通用搜索框的长度等样式 
         width: '300px',
       },
       controlStyle: {//设置搜索控件的长度等样式
-        width: '300px',
+        width: '350px',
       },
       labelWidth: "90px",//显示Label的宽度 
-      drawerSize: "550px",//drawner宽度设置
+      drawerSize: "600px",//drawner宽度设置
       searchFormInputPlaceholder: '请输入代码编码/名称',//要给子搜索组件传递的值
       searchFormInputAttrs: ['code', 'name'],//要给子搜索组件传递的属性名
       formOptions: [
@@ -299,9 +305,13 @@ export default {
       para.pageSize = this.pageSize
       if (flag === '2') { // 全部导出
         para.page = 1
-        para.pageSize = 10000
+        para.pageSize = 100000
       }
       return para
+    },
+    _getCodeSets () {
+      this.page = 1
+      this.getCodeSets()
     },
     //获取码表集列表
     getCodeSets (formValue) {

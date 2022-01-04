@@ -18,7 +18,7 @@
              class="login-container">
       <div class="head">
         <div class="login_logo"></div>
-        <h2 class="title">广州西门子变压器线体管控系统</h2>
+        <h2 class="title">{{login_logo_title}}</h2>
       </div>
       <el-form-item prop="account">
         <el-input type="text"
@@ -38,7 +38,7 @@
                    checked
                    class="remember">记住密码</el-checkbox>
 
-      <div style="margin-bottom: 20px;"
+      <div style="margin-bottom: 20px;display:none"
            class="count-test">
         <el-radio-group @change="loginAccount"
                         v-model="account3">
@@ -78,13 +78,14 @@ import { resetRouter, filterAsyncRouter } from '@/router/index'
 export default {
   data () {
     return {
+      login_logo_title: this.GLOBAL.login_logo_title,
       instance: "",
       loginStr: '登录',
       logining: false,
       loginingMock: false,
       ruleForm2: {
-        account: 'test',
-        checkPass: 'test'
+        account: '',
+        checkPass: ''
       },
       account3: '测试账号1',
       rules2: {
@@ -262,15 +263,15 @@ export default {
     // 获取路由树
     GetNavigationBar (uid) {
       var _this = this;
-      var loginParams = { uid: uid, t: new Date() };
+      //增加系统的请求标记 【EditBy shaocx,2021-05-12】
+      var loginParams = { uid: uid, t: new Date(), systemFlag: this.GLOBAL.systemFlag };
 
       getNavigationBar(loginParams).then(data => {
         _this.logining = false;
-
-
         if (!data.success) {
+          _this.loginStr = "重新登录";
           _this.$message({
-            message: data.msg,
+            message: '错误：' + data.msg + ',请确认该用户是否缺少角色！',
             type: 'error'
           });
         } else {
